@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>百问百答 · 31 个保研问答全收录</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../styles-additions.css">
+<link rel="stylesheet" href="../styles-home-v4.css">
+<link rel="stylesheet" href="../styles-interview-intro.css">
+</head>
+<body>
+
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <span class="data-mini">31 问答</span>
+    <span class="data-mini">2 阶段</span>
+    <span>真实可校验</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-main">
+    <a href="../index.html" class="brand">
+      <div class="brand-logo">保</div>
+      <div class="brand-text">
+        <h1>保研信息聚合库</h1>
+        <p>独立项目 · 真实可校验</p>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="search-trigger">🔍 搜 Ctrl+K</button>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <a href="../index.html" class="main-nav-item">首页</a>
+      <a href="notices.html" class="main-nav-item">保研通知</a>
+      <a href="schools.html" class="main-nav-item">保研院校</a>
+      <a href="intro.html" class="main-nav-item">保研通识</a>
+      <a href="interview.html" class="main-nav-item">面试指南</a>
+    </div>
+  </nav>
+</header>
+
+<main class="page-main">
+  <div class="page-header">
+    <span class="section-tag">❓ 百问百答</span>
+    <h1>31 个保研问答全收录</h1>
+    <p class="page-desc">按阶段分组 · 搜索过滤 · 回到通识页 →</p>
+  </div>
+
+  <div class="search-bar">
+    <input type="search" id="faq-search" placeholder="搜问题（如 保研 / 六级 / 双非）" class="search-input">
+    <span class="search-hint">实时过滤</span>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filter-group">
+      <label>阶段</label>
+      <div class="filter-pills" data-filter-group="stage">
+        <button class="filter-pill active" data-value="all">全部 (31)</button>
+        <button class="filter-pill" data-value="1">阶段 1（资格）(10)</button>
+        <button class="filter-pill" data-value="2">阶段 2（流程）(21)</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-list" id="faq-list"></div>
+
+  <div class="load-more" style="text-align:center; padding:24px; color:var(--color-text-tertiary); font-size:13px;">
+    📍 已显示 <span id="faq-count">0</span> 条 · 欢迎 <a href="mailto:baoyan-kb@example.com" style="color:var(--color-xdf-green);">提交新问题</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <div>保研信息聚合库 · 2026</div>
+    <div>独立学术项目 · 内容仅供参考</div>
+    <div>© 2026 · ICP 备案申请中</div>
+  </div>
+</footer>
+
+<script src="../data/faq-page.js"></script>
+</body>
+</html>

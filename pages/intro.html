@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>保研通识 · 2 阶段：获取保研资格 + 推免</title>
+<title>保研通识 · 2 阶段 + 3 栏布局（目录/内容/黑话百问）</title>
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../styles-additions.css">
 <link rel="stylesheet" href="../styles-home-v4.css">
@@ -46,41 +46,49 @@
 
 <main class="page-main">
   <div class="page-header">
-    <span class="section-tag">📚 保研通识 v4.1</span>
-    <h1>2 阶段：获取保研资格 + 推免</h1>
-    <p class="page-desc">从大一到大四完整路径 · 黑话/问答融入每阶段 · 8 章</p>
+    <span class="section-tag">📚 保研通识 v4.2</span>
+    <h1>2 阶段 · 3 栏布局</h1>
+    <p class="page-desc">左侧目录 + 中央内容 + 右侧黑话百问 + 全部独立页</p>
   </div>
 
-  <div class="intro-layout">
+  <div class="intro-layout-3col">
+
+    <!-- ===== 左侧目录 ===== -->
     <aside class="toc-sidebar">
       <h4>📚 章节</h4>
-      <a href="#phase-1">第一阶段：获取保研资格</a>
+      <div class="toc-section-label">第一阶段</div>
+      <a href="#phase-1">🎯 获取保研资格</a>
       <a href="#chapter-1-1">1.1 什么是保研资格</a>
       <a href="#chapter-1-2">1.2 6 项硬指标</a>
       <a href="#chapter-1-3">1.3 12 月时间轴</a>
-      <a href="#chapter-1-4">1.4 常见问题</a>
-      <a href="#phase-2">第二阶段：推免流程</a>
+      <a href="#chapter-1-4">1.4 阶段 1 问答</a>
+
+      <div class="toc-section-label">第二阶段</div>
+      <a href="#phase-2">🚀 推免流程</a>
       <a href="#chapter-2-1">2.1 推免流程全图</a>
       <a href="#chapter-2-2">2.2 夏令营策略</a>
       <a href="#chapter-2-3">2.3 预推免策略</a>
       <a href="#chapter-2-4">2.4 推免系统填报</a>
-      <a href="#chapter-2-5">2.5 常见问题</a>
-      <a href="#chapter-glossary" class="toc-section">— 黑话 —</a>
-      <a href="#chapter-glossary">全部 121 条</a>
-      <a href="#chapter-english" class="toc-section">— 英语 —</a>
-      <a href="#chapter-english">保研英语</a>
+      <a href="#chapter-2-5">2.5 阶段 2 问答</a>
+
+      <div class="toc-section-label">专项</div>
+      <a href="#chapter-english">🇬🇧 保研英语</a>
+
+      <div class="toc-section-label">独立页</div>
+      <a href="glossary.html">📖 全部 121 黑话</a>
+      <a href="faq.html">❓ 全部 31 问答</a>
     </aside>
 
+    <!-- ===== 中央内容 ===== -->
     <div class="intro-content">
 
-      <!-- ===== 第一阶段：获取保研资格 ===== -->
+      <!-- 第一阶段 -->
       <div class="phase-banner phase-1" id="phase-1">
         <span class="phase-num">第一阶段</span>
         <h2>🎯 获取保研资格</h2>
         <p>大一 ~ 大三上（12-18 个月准备期） · 核心：6 项硬指标 + 资格获取</p>
       </div>
 
-      <!-- 1.1 -->
       <section class="chapter" id="chapter-1-1">
         <h2>1.1 什么是保研资格</h2>
         <p>保研，全称"推荐优秀应届本科毕业生免试攻读研究生"，俗称<span data-glossary="推免" class="glossary-link">推免</span>。</p>
@@ -94,7 +102,6 @@
         </ul>
       </section>
 
-      <!-- 1.2 -->
       <section class="chapter" id="chapter-1-2">
         <h2>1.2 6 项硬指标</h2>
         <p>想获得推免资格，6 项缺一不可：</p>
@@ -106,15 +113,19 @@
             <tr><td>① 绩点排名</td><td>前 20-30%</td><td>985 普遍前 20-30%，C9 要求前 5-10%，双非头部要求前 5%</td></tr>
             <tr><td>② 英语</td><td>六级 425+</td><td>C9 隐性门槛 550+，985 头部 500-520，雅思 7+ 更有优势</td></tr>
             <tr><td>③ 科研</td><td>至少 1 项</td><td>论文/专利/<span data-glossary="大创" class="glossary-link">大创</span>/项目结题</td></tr>
-            <tr><td>④ 竞赛</td><td>至少 1 项</td><td><span data-glossary="挑战杯" class="glossary-link">挑战杯</span>/<span data-glossary="互联网+" class="glossary-link">互联网+</span>/数学建模/ACM 等</td></tr>
+            <tr><td>④ 竞赛</td><td>至少 1 项</td><td><span class="glossary-link">挑战杯</span>/<span class="glossary-link">互联网+</span>/数学建模/ACM 等</td></tr>
             <tr><td>⑤ 品德</td><td>无违规</td><td>无考试作弊/学术不端/处分</td></tr>
             <tr><td>⑥ 资格</td><td>本校有名额</td><td>本校在 433 所推免资格院校名单中</td></tr>
           </tbody>
         </table>
-        <p>6 项都要满足。哪一项卡住都会<span data-glossary="推免资格" class="glossary-link">推免资格</span>被撤销。</p>
       </section>
 
-      <!-- 1.3 -->
+      <section class="chapter" id="chapter-1-2b">
+        <h2>1.2b 7 类推免资格（教育部规定）</h2>
+        <p>教育部规定的 <b>7 类推免资格</b>，每名学生只能选择 <b>其中 1 类</b> 作为推免通道：</p>
+        <div id="qual-types"></div>
+      </section>
+
       <section class="chapter" id="chapter-1-3">
         <h2>1.3 12 月时间轴（资格准备）</h2>
         <p>推免资格的获取需要 <b>12-18 个月</b> 准备期：</p>
@@ -124,35 +135,42 @@
           <li><b>6-8 月（暑期）</b>：科研推进 / 参加竞赛</li>
           <li><b>9-12 月</b>：论文/竞赛成果 / 持续提绩点</li>
         </ul>
-        <p>详细 2 维矩阵见 <a href="../index.html#today">首页</a>。</p>
       </section>
 
-      <!-- 1.4 FAQ -->
+      <section class="chapter" id="chapter-1-3b">
+        <h2>1.3b 推免名额分配规则（基础+倾斜+专项 3 层）</h2>
+        <div id="alloc-layers"></div>
+      </section>
+
       <section class="chapter" id="chapter-1-4">
-        <h2>1.4 常见问题（阶段 1）</h2>
+        <h2>1.4 阶段 1 常见问答</h2>
+        <p>获取保研资格阶段的高频问题 · 完整 31 问答见 <a href="faq.html">百问百答页</a></p>
         <div class="faq-list" id="faq-stage-1"></div>
       </section>
 
-      <!-- ===== 第二阶段：推免流程 ===== -->
+      <!-- 第二阶段 -->
       <div class="phase-banner phase-2" id="phase-2">
         <span class="phase-num">第二阶段</span>
         <h2>🚀 推免流程</h2>
         <p>大三下 ~ 大四（5-9 月关键期） · 核心：5 步流程 + 院校选择 + 录取</p>
       </div>
 
-      <!-- 2.1 -->
       <section class="chapter" id="chapter-2-1">
         <h2>2.1 推免流程全图（5 步）</h2>
         <ol>
           <li><b>投递期（3-5 月）</b>：准备材料 + <span data-glossary="夏令营" class="glossary-link">夏令营</span>投递</li>
-          <li><b>参营期（6-8 月）</b>：参加<span data-glossary="夏令营" class="glossary-link">夏令营</span>，拿 <span data-glossary="优营" class="glossary-link">优营</span></li>
+          <li><b>参营期（6-8 月）</b>：参加<span class="glossary-link">夏令营</span>，拿 <span data-glossary="优营" class="glossary-link">优营</span></li>
           <li><b>冲刺期（8-9 月）</b>：<span data-glossary="预推免" class="glossary-link">预推免</span>报名 + 复试</li>
           <li><b>填报期（9.22-9.28）</b>：<span data-glossary="九二二" class="glossary-link">9.22</span><span data-glossary="推免服务系统" class="glossary-link">推免服务系统</span>填报 + <span data-glossary="九推" class="glossary-link">九推</span></li>
           <li><b>收尾期（10-12 月）</b>：<span data-glossary="拟录取" class="glossary-link">拟录取</span> + <span data-glossary="录取确认" class="glossary-link">录取确认</span></li>
         </ol>
       </section>
 
-      <!-- 2.2 -->
+      <section class="chapter" id="chapter-2-1b">
+        <h2>2.1b 推免流程图（教育部标准）</h2>
+        <div id="workflow-stages"></div>
+      </section>
+
       <section class="chapter" id="chapter-2-2">
         <h2>2.2 夏令营策略</h2>
         <h3>5-6 月投递</h3>
@@ -172,7 +190,6 @@
         </ul>
       </section>
 
-      <!-- 2.3 -->
       <section class="chapter" id="chapter-2-3">
         <h2>2.3 预推免策略</h2>
         <p>8-9 月举办的第二轮选拔，特点是：</p>
@@ -184,38 +201,37 @@
         <h3>5 大策略</h3>
         <ol>
           <li>看 3 所冲刺 + 2 所兜底</li>
-          <li>提前<span data-glossary="套磁" class="glossary-link">套磁</span>目标导师</li>
+          <li>提前<span class="glossary-link">套磁</span>目标导师</li>
           <li>准备 3 份<span data-glossary="PS" class="glossary-link">PS</span>（每所 1 份）</li>
           <li>面试前 1 周再过一遍材料</li>
           <li>面试中<span data-glossary="导师双选" class="glossary-link">导师双选</span>主动表态</li>
         </ol>
       </section>
 
-      <!-- 2.4 -->
       <section class="chapter" id="chapter-2-4">
         <h2>2.4 推免系统填报（9.22-9.28）</h2>
         <p>9.22 <span data-glossary="推免服务系统" class="glossary-link">推免服务系统</span>开放填报志愿，3 个平行志愿。</p>
         <h3>填报时间线</h3>
         <ul>
           <li><b>9.22-9.27</b>：填报志愿 + 联系院校</li>
-          <li><b>9.28-10.20</b>：复试 + 录取（<span data-glossary="九推" class="glossary-link">九推</span>）</li>
+          <li><b>9.28-10.20</b>：复试 + 录取（<span class="glossary-link">九推</span>）</li>
           <li><b>10.20 后</b>：<span data-glossary="录取确认" class="glossary-link">录取确认</span> + 注册</li>
         </ul>
         <h3>3 大注意</h3>
         <ul>
           <li>⚠️ 志愿一旦<span data-glossary="系统锁定" class="glossary-link">系统锁定</span>，48 小时内不能改</li>
-          <li>⚠️ <span data-glossary="拟录取" class="glossary-link">拟录取</span>确认后不能再改</li>
+          <li>⚠️ <span class="glossary-link">拟录取</span>确认后不能再改</li>
           <li>⚠️ 放弃需提交<span data-glossary="放弃函" class="glossary-link">放弃函</span>，影响次年</li>
         </ul>
       </section>
 
-      <!-- 2.5 FAQ -->
       <section class="chapter" id="chapter-2-5">
-        <h2>2.5 常见问题（阶段 2）</h2>
+        <h2>2.5 阶段 2 常见问答</h2>
+        <p>推免流程阶段的高频问题 · 完整 31 问答见 <a href="faq.html">百问百答页</a></p>
         <div class="faq-list" id="faq-stage-2"></div>
       </section>
 
-      <!-- ===== 附加：保研英语 ===== -->
+      <!-- 英语专项 -->
       <section class="chapter" id="chapter-english">
         <div class="english-tip-card">
           <strong>🇬🇧 保研英语 · 双保险核心能力</strong><br>
@@ -233,11 +249,10 @@
           </tbody>
         </table>
         <h3>3.2 自我介绍模板（英文 1-2 分钟）</h3>
-        <p><b>5 段式</b>：</p>
         <ol>
           <li><b>开场（10s）</b>：Good morning, professors. I'm XXX, from XXX University, majoring in XXX.</li>
           <li><b>学术背景（30s）</b>：My GPA is X.X/4.0, ranking X%. My core courses include XXX.</li>
-          <li><b>科研经历（40s）</b>：I joined Prof. XXX's lab, working on XXX. The project aims to XXX, and I contributed XXX. We published a paper in XXX.</li>
+          <li><b>科研经历（40s）</b>：I joined Prof. XXX's lab, working on XXX. We published a paper in XXX.</li>
           <li><b>研究兴趣（20s）</b>：I'm particularly interested in XXX at your lab, because XXX.</li>
           <li><b>结尾（10s）</b>：I believe XXX experience has prepared me well. Thank you.</li>
         </ol>
@@ -256,20 +271,72 @@
         </ol>
       </section>
 
-      <!-- ===== 121 个黑话 ===== -->
-      <section class="chapter" id="chapter-glossary">
-        <h2>4. 121 个黑话术语</h2>
-        <p>按字母索引浏览</p>
-        <div class="glossary-tabs">
-          <button class="glossary-tab active" data-glossary="all">全部 121</button>
-        </div>
-        <div class="glossary-content active" id="glossary-content">
-          <div class="alphabet-index" id="alphabet-index"></div>
-          <div class="glossary-grid" id="glossary-grid"></div>
-        </div>
-      </section>
-
     </div>
+
+    <!-- ===== 右栏：黑话 + 百问 + 时间提醒 ===== -->
+    <aside class="intro-right-sidebar">
+
+      <!-- 黑话精选 -->
+      <div class="mini-block">
+        <div class="mini-block-header">
+          <div class="mini-block-icon">📖</div>
+          <div class="mini-block-title">黑话精选</div>
+          <span class="mini-block-count">6/121</span>
+        </div>
+        <div class="glossary-mini">
+          <span class="glossary-mini-item"><span class="glossary-mini-term">推免</span><span class="glossary-mini-def">推荐免试攻读研究生</span></span>
+          <span class="glossary-mini-item"><span class="glossary-mini-term">夏令营</span><span class="glossary-mini-def">5-7 月各校提前招生</span></span>
+          <span class="glossary-mini-item"><span class="glossary-mini-term">九推</span><span class="glossary-mini-def">9.28 推免系统</span></span>
+          <span class="glossary-mini-item"><span class="glossary-mini-term">预推免</span><span class="glossary-mini-def">9 月推免前批次</span></span>
+          <span class="glossary-mini-item"><span class="glossary-mini-term">套磁</span><span class="glossary-mini-def">提前联系导师</span></span>
+          <span class="glossary-mini-item"><span class="glossary-mini-term">BG</span><span class="glossary-mini-def">综合学术背景</span></span>
+        </div>
+        <a href="glossary.html" class="side-link-more">→ 全部 121 黑话</a>
+      </div>
+
+      <!-- 百问精选 -->
+      <div class="mini-block">
+        <div class="mini-block-header">
+          <div class="mini-block-icon">❓</div>
+          <div class="mini-block-title">百问精选</div>
+          <span class="mini-block-count">6/31</span>
+        </div>
+        <div class="faq-mini">
+          <a href="faq.html" class="faq-mini-item"><span class="faq-mini-q">保研什么时候开始准备？</span></a>
+          <a href="faq.html" class="faq-mini-item"><span class="faq-mini-q">双非能保到清北吗？</span></a>
+          <a href="faq.html" class="faq-mini-item"><span class="faq-mini-q">六级多少分够用？</span></a>
+          <a href="faq.html" class="faq-mini-item"><span class="faq-mini-q">科研和竞赛哪个更重要？</span></a>
+          <a href="faq.html" class="faq-mini-item"><span class="faq-mini-q">夏令营和预推免能同时报吗？</span></a>
+          <a href="faq.html" class="faq-mini-item"><span class="faq-mini-q">保研失败怎么转留学？</span></a>
+        </div>
+        <a href="faq.html" class="side-link-more">→ 全部 31 问答</a>
+      </div>
+
+      <!-- 时间点提醒 -->
+      <div class="mini-block">
+        <div class="mini-block-header">
+          <div class="mini-block-icon">⏰</div>
+          <div class="mini-block-title">时间点提醒</div>
+        </div>
+        <div class="time-reminder">
+          <div class="time-item urgent">
+            <span class="time-event">9.22 推免填报</span>
+            <span class="time-count">13 天</span>
+          </div>
+          <div class="time-item">
+            <span class="time-event">9.28 复试</span>
+            <span class="time-count">19 天</span>
+          </div>
+          <div class="time-item">
+            <span class="time-event">10.20 录取截止</span>
+            <span class="time-count">41 天</span>
+          </div>
+        </div>
+        <a href="notices.html" class="side-link-more">→ 全部通知</a>
+      </div>
+
+    </aside>
+
   </div>
 </main>
 
@@ -281,6 +348,8 @@
   </div>
 </footer>
 
+<script src="../data/policy-data.js"></script>
 <script src="../data/intro-page.js"></script>
+<script src="../data/intro-supplements.js"></script>
 </body>
 </html>

@@ -393,3 +393,44 @@
 .phase-banner.phase-2 .phase-num { color: #FF7D00; }
 .phase-banner h2 { margin: 0 0 4px; font-size: 24px; color: var(--color-text-primary); }
 .phase-banner p { margin: 0; font-size: 13px; color: var(--color-text-secondary); }
+
+/* ===== 搜索框 ===== */
+.search-bar {
+  display: flex; align-items: center; gap: 12px;
+  background: white; border: 1px solid var(--color-border-color);
+  border-radius: 8px; padding: 4px 16px; margin-bottom: 16px;
+}
+.search-input {
+  flex: 1; padding: 8px 0; border: 0; outline: 0;
+  font-size: 14px; font-family: inherit; color: var(--color-text-primary);
+  background: transparent;
+}
+.search-hint {
+  font-size: 11px; color: var(--color-text-tertiary);
+}
+
+/* ===== 黑话元信息 ===== */
+.glossary-meta {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+}
+
+/* ===== FAQ 阶段标签 ===== */
+.faq-stage-tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.faq-stage-tag.stage-1 {
+  background: var(--color-xdf-green-pale);
+  color: var(--color-xdf-green-dark);
+}
+.faq-stage-tag.stage-2 {
+  background: #FFF3E0;
+  color: #FF7D00;
+}
