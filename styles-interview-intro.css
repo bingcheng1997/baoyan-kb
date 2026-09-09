@@ -1,0 +1,342 @@
+/* 面试页 + 通识页追加样式 */
+
+/* ===== Tab 切换 ===== */
+.tab-bar {
+  display: flex;
+  gap: 4px;
+  background: var(--color-bg-secondary);
+  padding: 4px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+.tab-btn {
+  flex: 1;
+  padding: 12px 16px;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.tab-btn:hover { color: var(--color-xdf-green); }
+.tab-btn.active {
+  background: white;
+  color: var(--color-xdf-green);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.tab-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 16px 0 4px;
+  color: var(--color-text-primary);
+}
+.tab-desc {
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+  margin: 0 0 16px;
+}
+
+/* ===== 面试卡片 ===== */
+.interview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .interview-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .interview-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.interview-card {
+  background: white;
+  border: 1px solid var(--color-border-color);
+  border-radius: 8px;
+  padding: 16px;
+}
+.interview-school {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-text-primary);
+}
+.interview-types {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.type-pill {
+  padding: 2px 8px;
+  background: var(--color-xdf-green-light);
+  color: var(--color-xdf-green-dark);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.interview-english {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+.interview-count {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-xdf-green);
+  margin-bottom: 8px;
+}
+.row-link {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--color-xdf-green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== 经验卡 ===== */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.exp-card {
+  background: white;
+  border: 1px solid var(--color-border-color);
+  border-left: 4px solid var(--color-xdf-green);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+.exp-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--color-text-primary);
+}
+.exp-bg {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  margin: 0 0 8px;
+}
+.exp-quote {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  margin: 8px 0 0;
+  padding: 8px 0 0;
+  border-top: 1px dashed var(--color-border-color);
+}
+
+/* ===== 英语 Tip 卡 ===== */
+.english-tip-card {
+  background: linear-gradient(135deg, var(--color-xdf-green-pale) 0%, white 100%);
+  border: 1px solid var(--color-xdf-green);
+  border-left: 4px solid var(--color-xdf-green);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.english-tip-card a {
+  color: var(--color-xdf-green);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ===== 通识页 - 左侧目录 + 内容 ===== */
+.intro-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 1024px) {
+  .intro-layout { grid-template-columns: 240px 1fr; }
+}
+.toc-sidebar {
+  background: white;
+  border: 1px solid var(--color-border-color);
+  border-radius: 8px;
+  padding: 16px;
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+.toc-sidebar h4 {
+  margin: 0 0 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-tertiary);
+}
+.toc-sidebar a {
+  display: block;
+  padding: 6px 8px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+.toc-sidebar a:hover { color: var(--color-xdf-green); background: var(--color-xdf-green-pale); }
+.toc-sidebar a.active { color: var(--color-xdf-green); border-left-color: var(--color-xdf-green); font-weight: 600; }
+.toc-section {
+  padding: 8px 0 8px 16px;
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.intro-content { display: flex; flex-direction: column; gap: 24px; }
+.chapter {
+  background: white;
+  border: 1px solid var(--color-border-color);
+  border-radius: 8px;
+  padding: 24px;
+  scroll-margin-top: 80px;
+}
+.chapter h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  color: var(--color-xdf-green);
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-xdf-green);
+}
+.chapter h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 16px 0 8px;
+}
+.chapter p { line-height: 1.8; margin: 8px 0; color: var(--color-text-secondary); }
+.chapter ul, .chapter ol { padding-left: 20px; line-height: 1.8; color: var(--color-text-secondary); }
+
+/* FAQ 折叠 */
+.faq-list { display: flex; flex-direction: column; gap: 8px; }
+.faq-item {
+  background: var(--color-bg-secondary);
+  border-radius: 6px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+.faq-question {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-xdf-green);
+  margin-bottom: 0;
+}
+.faq-question::before { content: 'Q. '; }
+.faq-answer {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-border-color);
+  display: none;
+}
+.faq-item.open .faq-answer { display: block; }
+.faq-item.open .faq-question::before { content: 'Q. '; }
+
+/* 黑话 Tab */
+.glossary-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-border-color);
+}
+.glossary-tab {
+  padding: 8px 16px;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+.glossary-tab.active {
+  color: var(--color-xdf-green);
+  border-bottom-color: var(--color-xdf-green);
+  font-weight: 700;
+}
+.glossary-content { display: none; }
+.glossary-content.active { display: block; }
+.alphabet-index {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.alpha-btn {
+  padding: 4px 10px;
+  background: white;
+  border: 1px solid var(--color-border-color);
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  font-family: inherit;
+}
+.alpha-btn.active { background: var(--color-xdf-green); color: white; }
+.glossary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+@media (min-width: 768px) {
+  .glossary-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.glossary-card {
+  background: var(--color-bg-secondary);
+  border-radius: 6px;
+  padding: 12px 16px;
+}
+.glossary-term {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-xdf-green);
+  margin-bottom: 4px;
+}
+.glossary-def {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ===== Page Main ===== */
+.page-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+.page-header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border-color);
+}
+.page-header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 12px 0 8px;
+  color: var(--color-text-primary);
+}
+.page-desc {
+  font-size: 14px;
+  color: var(--color-text-tertiary);
+  margin: 0;
+}
+.load-more a { color: var(--color-xdf-green); text-decoration: none; font-weight: 600; }
+.text-muted { color: var(--color-text-tertiary); }
+.text-center { text-align: center; }
