@@ -1,0 +1,258 @@
+{
+  "version": "1.0.0",
+  "generated_date": "2026-09-09",
+  "site": {
+    "title": "保研留学双保险知识库",
+    "subtitle": "新东方国际教育 · 保研+留学双规划唯一知识基座",
+    "tagline": "保研与留学不是单选题，是同一背景下的双保险策略",
+    "main_axis": "双保险 · 一份努力两份收获",
+    "dual_advantage": {
+      "pivot": "保研与留学共用同一份底层资产（绩点+英语+科研+竞赛）",
+      "uniqueness": "行业唯一联动，无竞品做此结构",
+      "user_value": "失败有兜底 + 成功可双收 + 路径可切换"
+    }
+  },
+  "navigation": {
+    "primary": [
+      {"id": "home", "label": "首页", "href": "index.html", "icon": "🏠"},
+      {"id": "dual-path", "label": "双保险", "href": "pages/dual-path.html", "icon": "🔀"},
+      {"id": "policies", "label": "保研政策", "href": "pages/policies.html", "icon": "📜"},
+      {"id": "schools", "label": "院校库", "href": "pages/schools.html", "icon": "🎓"},
+      {"id": "positioning", "label": "智能定位", "href": "pages/positioning.html", "icon": "🎯"},
+      {"id": "interview", "label": "面试真题", "href": "pages/interview.html", "icon": "💬"},
+      {"id": "english", "label": "英语通道", "href": "pages/english.html", "icon": "🇬🇧"},
+      {"id": "cases", "label": "真实案例", "href": "pages/cases.html", "icon": "📚"},
+      {"id": "calendar", "label": "截止日历", "href": "pages/calendar.html", "icon": "📅"}
+    ]
+  },
+  "stats": {
+    "total_documents": 5,
+    "phase_1_target_documents": 129,
+    "total_schools_target": 120,
+    "total_rules_target": 20,
+    "total_cases_target": 20,
+    "schema_set": ["policy", "process", "material", "school", "rule", "case"],
+    "last_updated": "2026-09-09",
+    "next_milestone": "Phase 1 完成 8 周内 (2026 Q4)"
+  },
+  "competitive_matrix": [
+    {"competitor": "保研站", "url": "baoyanzhan.com", "strength": "通知聚合+日历", "weakness": "无留学联动，无定位", "our_edge": "双保险独家"},
+    {"competitor": "保研通知网", "url": "baoyantongzhi.com", "strength": "倒计时+多维筛选", "weakness": "无院校字段级数据", "our_edge": "8 字段院校库"},
+    {"competitor": "保研加油站", "url": "bibaoyan.com.cn", "strength": "AI聊天+学科分类", "weakness": "AI粗，无双保险", "our_edge": "智能定位+双保险"},
+    {"competitor": "寻鹿 Seekoffer", "url": "seekoffer.com.cn", "strength": "工作台+材料管理", "weakness": "无定位，无留学", "our_edge": "留学联动"},
+    {"competitor": "保研岛", "url": "baoyandao.com", "strength": "经验社区", "weakness": "数据不透明", "our_edge": "L1/L2/L3 源分级"},
+    {"competitor": "保研人", "url": "baoyanren.com", "strength": "案例库", "weakness": "无标准化", "our_edge": "脱敏 Schema 案例"},
+    {"competitor": "Coursera", "url": "coursera.org", "strength": "分类导航+推荐", "weakness": "非保研场景", "our_edge": "场景化分流"},
+    {"competitor": "GitHub", "url": "github.com", "strength": "文档+案例品牌墙", "weakness": "非保研场景", "our_edge": "案例品牌墙"}
+  ],
+  "key_differentiators": [
+    {
+      "icon": "🔀",
+      "title": "保研+留学双保险",
+      "subtitle": "行业唯一联动结构",
+      "description": "绩点+英语+科研+竞赛 = 保研留学共用一份底层资产。保研失败留学兜底，留学成功可双收。"
+    },
+    {
+      "icon": "🎯",
+      "title": "智能定位引擎",
+      "subtitle": "规则引擎 v1.0 → 智能体 v2.0",
+      "description": "10 维输入 → 5 维输出 → 冲稳保 15 所院校推荐。首页保留智能评估板块，后续接入智能体。"
+    },
+    {
+      "icon": "🎓",
+      "title": "8 字段院校库",
+      "subtitle": "字段级可点开",
+      "description": "基础/保研核心/学院/夏令营/预推免/特殊要求/录取数据/联系 —— 8 大字段，2 源交叉验证。"
+    },
+    {
+      "icon": "🇬🇧",
+      "title": "英语保研通道",
+      "subtitle": "新东方独家",
+      "description": "港澳台/中外合办/英语面试 —— 行业唯一英语专题，保研+留学英语一站打通。"
+    },
+    {
+      "icon": "📊",
+      "title": "数据透明三级",
+      "subtitle": "L1/L2/L3 + T1-T4",
+      "description": "每个数据点都有源+时效+校验数。过期自动预警，竞品都没做。"
+    },
+    {
+      "icon": "📚",
+      "title": "脱敏授权案例",
+      "subtitle": "结构化沉淀",
+      "description": "学生授权 + 院校公示交叉验证 + 6 类分类（标杆/边缘/双非/跨专业/失败）。"
+    }
+  ],
+  "user_journeys": [
+    {
+      "stage": "大一大二·认知期",
+      "title": "刚听说保研，先了解下",
+      "icon": "🌱",
+      "actions": ["了解保研基本流程", "对比保研 vs 留学", "查本校保研率"]
+    },
+    {
+      "stage": "大三上·准备期",
+      "title": "要开始准备了，从哪入手",
+      "icon": "📋",
+      "actions": ["定位我能去的院校", "了解夏令营申请", "提升绩点+英语"]
+    },
+    {
+      "stage": "大三下·冲刺期",
+      "title": "夏令营+预推免密集投递",
+      "icon": "🚀",
+      "actions": ["找目标院校通知", "准备文书+面试", "做时间线管理"]
+    },
+    {
+      "stage": "大四·收官期",
+      "title": "推免系统填报+捡漏",
+      "icon": "🎯",
+      "actions": ["9推+捡漏", "港澳台保研", "留学同步申请"]
+    }
+  ],
+  "school_tiers": [
+    {"name": "C9（顶尖 9 所）", "count": 9, "color": "#FFD700", "description": "清华/北大/复旦/上交/浙大/中科大/南大/西交/哈工大"},
+    {"name": "985 中尾部", "count": 30, "color": "#C0C0C0", "description": "武大/中山/同济等"},
+    {"name": "211 头部", "count": 20, "color": "#CD7F32", "description": "央财/上财/北外等"},
+    {"name": "双非头部", "count": 60, "color": "#5C6BC0", "description": "深大/南科大等"}
+  ],
+  "policy_documents": [
+    {
+      "id": "01",
+      "filename": "01_推免政策演变史_2015-2026.md",
+      "title": "推免政策演变史（2015-2026）",
+      "category": "政策总览",
+      "size_kb": 8.4,
+      "status": "已发布",
+      "source_level": "L1",
+      "update_date": "2026-09-09",
+      "expiry": "T4长期",
+      "tags": ["政策演变", "教育部", "改革"],
+      "preview": "从 2015 试点到 2026 全国统一推免的完整时间线，含 6 次重大改革节点。"
+    },
+    {
+      "id": "02",
+      "filename": "02_教育部2026年推免政策文件.md",
+      "title": "教育部 2026 年推免政策文件",
+      "category": "政策总览",
+      "size_kb": 4.2,
+      "status": "已发布",
+      "source_level": "L1",
+      "update_date": "2026-09-09",
+      "expiry": "T1实时",
+      "tags": ["2026", "教育部", "新政"],
+      "preview": "教育部教学厅〔2026〕X 号文件全解读，含名额分配、接收办法、违规处罚。"
+    },
+    {
+      "id": "03",
+      "filename": "03_学信网推免系统操作指南.md",
+      "title": "学信网推免系统操作指南",
+      "category": "流程",
+      "size_kb": 4.0,
+      "status": "已发布",
+      "source_level": "L1",
+      "update_date": "2026-09-09",
+      "expiry": "T2半年",
+      "tags": ["学信网", "操作指南", "填报"],
+      "preview": "9 月 22 日推免系统填报详细步骤，含 8 大高频问题 Q&A。"
+    },
+    {
+      "id": "04",
+      "filename": "04_推免纪律与申诉流程.md",
+      "title": "推免纪律与申诉流程",
+      "category": "政策总览",
+      "size_kb": 4.0,
+      "status": "已发布",
+      "source_level": "L1",
+      "update_date": "2026-09-09",
+      "expiry": "T2半年",
+      "tags": ["纪律", "申诉", "合规"],
+      "preview": "推免违规处罚条例全收录，含 4 类申诉渠道与处理时限。"
+    },
+    {
+      "id": "05",
+      "filename": "05_港澳台及中外合办保研.md",
+      "title": "港澳台及中外合办保研",
+      "category": "特殊通道",
+      "size_kb": 6.1,
+      "status": "已发布",
+      "source_level": "L1",
+      "update_date": "2026-09-09",
+      "expiry": "T2半年",
+      "tags": ["港澳台", "中外合办", "英语"],
+      "preview": "港中深/上纽/西浦等 9 所中外合办 + 港澳台保研全指南。**新东方独家板块。**"
+    }
+  ],
+  "dual_path_strategies": [
+    {
+      "scenario": "保研为主，留学兜底",
+      "background": "985/211 前 30%，英语已考出",
+      "strategy": "全力冲保研，9 月同步申请港澳/英国 G5 兜底",
+      "english_requirement": "雅思 7.0+ / 托福 100+",
+      "timeline": "大三上保研准备 → 大三下夏令营 → 大四上 9 推 + 港澳申请"
+    },
+    {
+      "scenario": "保研+留学双投",
+      "background": "985/211 前 20%，科研+竞赛强",
+      "strategy": "保研冲清北复交 + 留学冲美 Top 30 / 英国 G5",
+      "english_requirement": "雅思 7.5+ / 托福 105+",
+      "timeline": "大三同步准备 → 暑假保研夏令营+留学文书 → 大四拿到 offer 再选"
+    },
+    {
+      "scenario": "保研转留学",
+      "background": "保研失败/边缘/想转方向",
+      "strategy": "保研冲一冲，9 月初同步申请英国/港澳滚动录取",
+      "english_requirement": "雅思 6.5+ / 托福 90+",
+      "timeline": "大四上保研冲刺 → 9 月初申请 → 次年 1-3 月入学"
+    },
+    {
+      "scenario": "中外合办直申",
+      "background": "本科 985/211，想拿中外双学位",
+      "strategy": "保研申请港中深/上纽/西浦/昆山杜克等中外合办硕士",
+      "english_requirement": "全英文项目，托福 95+ / 雅思 7.0+",
+      "timeline": "大三全年准备 → 大四上 9 推直接申报"
+    }
+  ],
+  "english_special_programs": [
+    {
+      "school": "香港中文大学（深圳）",
+      "tier": "中外合办",
+      "english_required": "全英项目",
+      "programs": ["数据科学硕士", "金融工程", "计算机科学"],
+      "feature": "可中文授课也可英文"
+    },
+    {
+      "school": "上海纽约大学",
+      "tier": "中外合办",
+      "english_required": "全英项目",
+      "programs": ["数据分析", "计算机科学", "电子工程"],
+      "feature": "纽约大学全球学位"
+    },
+    {
+      "school": "西交利物浦大学",
+      "tier": "中外合办",
+      "english_required": "全英项目",
+      "programs": ["城市规划", "金融数学", "计算机"],
+      "feature": "利物浦学位 + 2+2 可选"
+    },
+    {
+      "school": "昆山杜克大学",
+      "tier": "中外合办",
+      "english_required": "全英项目",
+      "programs": ["医学物理", "环境科学", "数据科学"],
+      "feature": "杜克学位 + 全球资源"
+    },
+    {
+      "school": "宁波诺丁汉大学",
+      "tier": "中外合办",
+      "english_required": "全英项目",
+      "programs": ["金融会计", "国际商务", "计算机"],
+      "feature": "诺丁汉学位 + 性价比高"
+    }
+  ],
+  "countdown_events": [
+    {"name": "2026 推免系统填报", "date": "2026-09-22T00:00:00", "type": "国家级", "critical": true},
+    {"name": "复旦预推免截止", "date": "2026-09-15T23:59:59", "type": "校级", "critical": false},
+    {"name": "清华夏令营申请截止", "date": "2026-06-20T23:59:59", "type": "校级", "critical": false},
+    {"name": "南大接收推免生截止", "date": "2026-10-15T23:59:59", "type": "校级", "critical": false}
+  ]
+}
