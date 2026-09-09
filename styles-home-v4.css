@@ -439,3 +439,121 @@
 .footer-bottom div {
   margin: 2px 0;
 }
+/* ===== 中央 + 右栏布局 ===== */
+.main-with-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 1024px) {
+  .main-with-right {
+    grid-template-columns: 1fr 280px;
+  }
+}
+@media (min-width: 1280px) {
+  .main-with-right {
+    grid-template-columns: 1fr 300px;
+  }
+}
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 80px;
+  align-self: start;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+@media (max-width: 1023px) {
+  .right-sidebar {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .right-sidebar .mini-block {
+    flex: 1;
+    min-width: 280px;
+  }
+}
+
+/* mini-block 智能评估 */
+.mini-block {
+  background: white;
+  border: 1px solid var(--color-border-color);
+  border-radius: 8px;
+  padding: 16px;
+}
+.mini-block-green {
+  border-top: 4px solid var(--color-xdf-green);
+  background: linear-gradient(180deg, var(--color-xdf-green-pale) 0%, white 100%);
+}
+.mini-block-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.mini-block-icon {
+  font-size: 20px;
+}
+.mini-block-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  flex: 1;
+}
+.mini-block-count {
+  font-size: 10px;
+  padding: 1px 6px;
+  background: var(--color-xdf-green);
+  color: white;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.mini-block-desc {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+.mini-block-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.mini-block-form select,
+.mini-block-form input {
+  padding: 6px 10px;
+  font-size: 12px;
+  border: 1px solid var(--color-border-color);
+  border-radius: 4px;
+  background: white;
+  font-family: inherit;
+  color: var(--color-text-primary);
+}
+.mini-block-form button {
+  padding: 8px 12px;
+  background: var(--color-xdf-green);
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+.mini-block-form button:hover {
+  background: var(--color-xdf-green-dark);
+}
+.mini-block-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+  padding-top: 8px;
+  border-top: 1px dashed var(--color-border-color);
+}

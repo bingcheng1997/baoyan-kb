@@ -232,7 +232,7 @@
   </div>
 </section>
 
-<!-- ===== 5. 中央 3 section ===== -->
+<!-- ===== 5. 中央 3 section + 右栏 ===== -->
 <section class="main-sections">
   <div class="container">
     <div class="section-head">
@@ -241,7 +241,8 @@
       <p class="section-desc">3 个高频数据板块 · L1 官方源</p>
     </div>
 
-    <div class="main-grid">
+    <div class="main-with-right">
+      <div class="main-grid">
       <!-- Section 1: 最新保研通知 -->
       <div class="main-block">
         <div class="main-block-header">
@@ -303,6 +304,41 @@
           </table>
         </div>
       </div>
+    </div>
+
+      <!-- ===== 右栏：仅智能评估 ===== -->
+      <aside class="right-sidebar">
+        <div class="mini-block mini-block-green">
+          <div class="mini-block-header">
+            <div class="mini-block-icon">🎯</div>
+            <div class="mini-block-title">智能评估</div>
+            <span class="mini-block-count">v1.0</span>
+          </div>
+          <p class="mini-block-desc">10 维输入 · 冲稳保 15 所 · 数据不上传</p>
+          <form class="mini-block-form" action="pages/intro.html" method="get">
+            <select name="school" class="form-select form-select-sm">
+              <option value="">本科层次</option>
+              <option value="c9">C9</option>
+              <option value="985">985</option>
+              <option value="211">211</option>
+              <option value="double-non-top">双非头部</option>
+              <option value="double-non">双非</option>
+            </select>
+            <input type="number" name="rank" min="1" max="100" placeholder="排名 %" class="form-input form-input-sm">
+            <select name="english" class="form-select form-select-sm">
+              <option value="">英语成绩</option>
+              <option value="cet6-500">六级 500+</option>
+              <option value="cet6-550">六级 550+</option>
+              <option value="ielts-7">雅思 7+</option>
+            </select>
+            <button type="submit" class="btn btn-primary btn-sm">→ 出结果</button>
+          </form>
+          <div class="mini-block-meta">
+            <span>85%+ 可靠度</span>
+            <span>不收集数据</span>
+          </div>
+        </div>
+      </aside>
     </div>
   </div>
 </section>
