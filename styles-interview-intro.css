@@ -342,15 +342,17 @@
 .text-center { text-align: center; }
 /* 黑话正文链接 */
 .glossary-link {
-  color: var(--color-xdf-green);
+  color: var(--color-xdf-green-dark);
+  background: rgba(0, 176, 80, 0.08);
+  padding: 1px 4px;
+  border-radius: 3px;
   text-decoration: none;
   font-weight: 600;
-  border-bottom: 1px dashed var(--color-xdf-green);
   cursor: help;
 }
 .glossary-link:hover {
-  background: var(--color-xdf-green-pale);
-  border-bottom-style: solid;
+  background: rgba(0, 176, 80, 0.2);
+  color: var(--color-xdf-green-dark);
 }
 
 /* 阶段横幅 */
@@ -433,4 +435,26 @@
 .faq-stage-tag.stage-2 {
   background: #FFF3E0;
   color: #FF7D00;
+}
+
+/* ===== 3 栏布局（intro-layout-3col）===== */
+.intro-layout-3col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .intro-layout-3col {
+    grid-template-columns: 220px 1fr 280px;
+  }
+}
+.toc-section-label {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  padding: 12px 8px 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
 }
