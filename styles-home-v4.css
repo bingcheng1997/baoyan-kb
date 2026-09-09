@@ -557,3 +557,40 @@
   padding-top: 8px;
   border-top: 1px dashed var(--color-border-color);
 }
+
+/* 时间点提醒 */
+.time-reminder { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+.time-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 6px 8px; background: var(--color-bg-secondary); border-radius: 4px;
+  font-size: 12px;
+}
+.time-item.urgent {
+  background: linear-gradient(90deg, rgba(245,63,63,0.08), transparent);
+  border-left: 3px solid var(--color-danger);
+}
+.time-event { color: var(--color-text-primary); }
+.time-count {
+  color: var(--color-xdf-green); font-weight: 700; font-family: var(--font-mono);
+}
+.time-item.urgent .time-count { color: var(--color-danger); }
+
+/* 黑话/百问迷你 */
+.glossary-mini, .faq-mini { display: flex; flex-direction: column; gap: 2px; margin-bottom: 8px; }
+.glossary-mini-item, .faq-mini-item {
+  display: block; padding: 6px 0; font-size: 12px; color: var(--color-text-secondary);
+  text-decoration: none; border-bottom: 1px dashed var(--color-border-color);
+}
+.glossary-mini-item:last-child, .faq-mini-item:last-child { border-bottom: 0; }
+.glossary-mini-item:hover, .faq-mini-item:hover { color: var(--color-xdf-green); }
+.glossary-mini-term { font-weight: 600; color: var(--color-xdf-green); margin-right: 4px; }
+.glossary-mini-def { font-size: 11px; }
+.faq-mini-q { font-weight: 500; }
+.faq-mini-q::before { content: 'Q. '; color: var(--color-xdf-green); font-weight: 700; }
+
+/* 跳转链接 */
+.side-link-more {
+  display: block; text-align: center; font-size: 11px; color: var(--color-xdf-green);
+  padding-top: 6px; border-top: 1px dashed var(--color-border-color); text-decoration: none; font-weight: 600;
+}
+.side-link-more:hover { text-decoration: underline; }
