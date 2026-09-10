@@ -145,36 +145,40 @@
     });
   }
 
-  // ===== 年级切换（保研时间规划轴）=====
+  // ===== 年级切换（点击表头 column 切换）=====
   function setupGradeSwitch() {
-    const sw = $('grade-switch');
-    if (!sw) return;
-    sw.addEventListener('click', e => {
-      const btn = e.target.closest('.grade-btn');
-      if (!btn) return;
-      sw.querySelectorAll('.grade-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const grade = btn.dataset.grade;
-      // 高亮该年级的列，其他列淡化
-      document.querySelectorAll('.matrix-active-cell').forEach(cell => {
-        if (cell.dataset.col === grade) {
-          cell.classList.add('grade-active');
-        } else {
-          cell.classList.remove('grade-active');
-        }
-      });
-      // 表头列切换 active 状态
-      document.querySelectorAll('.matrix-active-col').forEach(th => {
-        if (th.dataset.col === grade) {
-          th.classList.add('grade-active');
-        } else {
-          th.classList.remove('grade-active');
-        }
+    // 点击表头 th
+    document.querySelectorAll('.grade-tab').forEach(th => {
+      const switchTo = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const grade = th.dataset.grade;
+        // 高亮该年级的列
+        document.querySelectorAll('.matrix-active-cell').forEach(cell => {
+          if (cell.dataset.col === grade) {
+            cell.classList.add('grade-active');
+          } else {
+            cell.classList.remove('grade-active');
+          }
+        });
+        // 表头列切换
+        document.querySelectorAll('.grade-tab').forEach(t => t.classList.remove('current'));
+        th.classList.add('current');
+        document.querySelectorAll('.matrix-active-col').forEach(c => {
+          if (c.dataset.col === grade) {
+            c.classList.add('current');
+          } else {
+            c.classList.remove('current');
+          }
+        });
+      };
+      th.addEventListener('click', switchTo);
+      th.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') switchTo(e);
       });
     });
     // 默认激活大三
     document.querySelectorAll('.matrix-active-cell[data-col="3"]').forEach(c => c.classList.add('grade-active'));
-    document.querySelector('.matrix-active-col[data-col="3"]').classList.add('grade-active');
   }
 
   // ===== 右栏 4 卡片 Tab 切换 =====

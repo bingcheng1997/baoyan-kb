@@ -913,3 +913,152 @@
   font-size: 11px;
   color: var(--color-text-tertiary);
 }
+
+/* ===== 规划轴 V2：表头可点击 + 整列信号 ===== */
+.grade-tab {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s;
+}
+.grade-tab:hover {
+  background: var(--color-xdf-green-pale) !important;
+  color: var(--color-xdf-green-dark) !important;
+}
+.grade-tab:focus {
+  outline: 2px solid var(--color-xdf-green);
+  outline-offset: -2px;
+}
+
+/* 整列信号：当前年级列的 4 个 cell 都强化 */
+.matrix-cell.grade-active {
+  background: linear-gradient(180deg, #FFF8E6 0%, #FFFBEA 100%) !important;
+  border-color: #FF7D00 !important;
+  font-weight: 600;
+  position: relative;
+}
+.matrix-cell.grade-active::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FF7D00;
+  box-shadow: 0 0 0 2px rgba(255, 125, 0, 0.2);
+  animation: now-pulse 2s infinite;
+}
+@keyframes now-pulse {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(255, 125, 0, 0.2); }
+  50% { box-shadow: 0 0 0 4px rgba(255, 125, 0, 0.4); }
+}
+
+/* 行高锁 */
+.matrix-cell {
+  min-height: 88px;
+  vertical-align: top;
+}
+.matrix-cell b {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: var(--color-text-primary);
+}
+.matrix-cell .text-muted {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-tertiary);
+}
+
+/* ===== 智能评估独立首屏 section ===== */
+.smart-assess-section {
+  padding: 48px 16px;
+  background: linear-gradient(135deg, #F0FDF4 0%, white 100%);
+  border-top: 1px solid var(--color-border-color);
+  border-bottom: 1px solid var(--color-border-color);
+}
+.smart-assess-box {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .smart-assess-box { grid-template-columns: 1fr 1fr; }
+}
+.smart-assess-box .section-title {
+  font-size: 24px;
+  margin: 0 0 4px;
+  border: 0;
+  padding: 0;
+  color: var(--color-xdf-green-dark);
+}
+.smart-assess-box .section-desc {
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+  margin: 0 0 16px;
+}
+.smart-assess-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.smart-assess-form select,
+.smart-assess-form input {
+  padding: 8px 12px;
+  font-size: 13px;
+  border: 1px solid var(--color-border-color);
+  border-radius: 4px;
+  background: white;
+  font-family: inherit;
+  color: var(--color-text-primary);
+}
+.smart-assess-cta {
+  grid-column: 1 / -1;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+}
+.smart-assess-meta {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  margin: 0;
+  text-align: center;
+}
+.smart-assess-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.stat-card {
+  background: white;
+  border: 1px solid var(--color-border-color);
+  border-radius: 8px;
+  padding: 16px 12px;
+  text-align: center;
+}
+.stat-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-xdf-green);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  margin-top: 6px;
+}
+
+/* 图例：橙点改进 */
+.dot.dot-now {
+  background: #FF7D00;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(255, 125, 0, 0.3);
+}

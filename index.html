@@ -44,9 +44,9 @@
     <h1 class="hero-title">同一份努力，<span class="highlight">两份收获</span></h1>
     <p class="hero-subtitle">绩点 + 英语 + 科研 + 竞赛 = 保研留学共用底层资产</p>
     <div class="hero-actions">
-      <a href="pages/intro.html" class="btn btn-primary btn-lg">📚 保研通识</a>
-      <a href="#cases" class="btn btn-secondary btn-lg">📖 看真实路径</a>
-      <a href="pages/intro.html#chapter-english" class="btn btn-ghost btn-lg">🇬🇧 英语专项</a>
+      <a href="#smart-assess" class="btn btn-primary btn-lg">🎯 1 分钟测我能保哪儿</a>
+      <a href="#matrix-section" class="btn btn-secondary btn-lg">📍 现在该做什么</a>
+      <a href="pages/intro.html" class="btn btn-ghost btn-lg">📚 保研通识</a>
     </div>
     <div class="hero-3points">
       <span>✅ 失败兜底</span>
@@ -55,29 +55,23 @@
     </div>
   </div>
 </section>
+</section>
 
 <!-- ===== 时间规划轴（按PDF：5 行分类 × 4 个年级）===== -->
 <section class="matrix-section">
   <div class="container">
-    <h2 class="section-title">保研时间规划轴</h2>
-
-    <!-- 年级切换器 -->
-    <div class="grade-switch" id="grade-switch">
-      <button class="grade-btn" data-grade="1">大一</button>
-      <button class="grade-btn" data-grade="2">大二</button>
-      <button class="grade-btn active" data-grade="3">大三 ★</button>
-      <button class="grade-btn" data-grade="4">大四</button>
-    </div>
+    <h2 class="section-title">保研 4 年规划</h2>
+    <p class="section-desc">点击表头切换年级 · 默认高亮大三 · 9-12 月关键期 · 点格子看 4-5 条完整动作</p>
 
     <div class="matrix-wrap">
       <table class="matrix-table">
         <thead>
           <tr>
             <th></th>
-            <th class="matrix-col-header matrix-active-col" data-col="1">大一</th>
-            <th class="matrix-col-header matrix-active-col" data-col="2">大二</th>
-            <th class="matrix-col-header current matrix-active-col" data-col="3">大三 ★9月-12月</th>
-            <th class="matrix-col-header matrix-active-col" data-col="4">大四</th>
+            <th class="matrix-col-header matrix-active-col grade-tab" role="tab" tabindex="0" data-grade="1">大一</th>
+            <th class="matrix-col-header matrix-active-col grade-tab" role="tab" tabindex="0" data-grade="2">大二</th>
+            <th class="matrix-col-header current matrix-active-col grade-tab" role="tab" tabindex="0" data-grade="3">大三 · 9-12月</th>
+            <th class="matrix-col-header matrix-active-col grade-tab" role="tab" tabindex="0" data-grade="4">大四</th>
           </tr>
         </thead>
         <tbody>
@@ -162,9 +156,9 @@
     </div>
 
     <div class="matrix-legend">
-      <span class="legend-item"><span class="dot dot-current"></span> 当前年级（点击切换）</span>
-      <span class="legend-item"><span class="dot dot-now"></span> ★ 现在关键期</span>
-      <span class="legend-item">点击格子 → 查看完整动作</span>
+      <span class="legend-item"><span class="dot dot-current"></span> 当前高亮年级（点表头切换）</span>
+      <span class="legend-item"><span class="dot dot-now"></span> ★ 现在该做的（每行有橙点）</span>
+      <span class="legend-item">点击格子 → 看 4-5 条完整动作</span>
     </div>
   </div>
 </section>
@@ -222,6 +216,51 @@
           <div class="path-step"><b>大四</b> 中山 + 澳门大学 → 双 offer</div>
         </div>
         <p class="case-quote">"保研没机会，留学照样逆袭"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 智能评估（独立首屏 Section，hero 跳转到这）===== -->
+<section id="smart-assess" class="smart-assess-section">
+  <div class="container">
+    <div class="smart-assess-box">
+      <div class="smart-assess-left">
+        <h2 class="section-title">智能评估</h2>
+        <p class="section-desc">3 维输入 · 1 分钟出结果 · 冲稳保 15 所</p>
+        <div class="smart-assess-form">
+          <select class="form-select form-select-sm">
+            <option value="">本科层次</option>
+            <option value="c9">C9</option>
+            <option value="985">985</option>
+            <option value="211">211</option>
+            <option value="double-non-top">双非头部</option>
+          </select>
+          <input type="number" placeholder="排名 %" class="form-input form-input-sm" min="1" max="100">
+          <select class="form-select form-select-sm">
+            <option value="">英语成绩</option>
+            <option value="cet6-500">六级 500+</option>
+            <option value="ielts-7">雅思 7+</option>
+          </select>
+          <a href="pages/intro.html" class="btn btn-primary btn-sm smart-assess-cta">→ 出 15 所冲稳保</a>
+        </div>
+        <p class="smart-assess-meta">85%+ 可靠度 · 不收集数据 · 完全本地计算</p>
+      </div>
+      <div class="smart-assess-right">
+        <div class="smart-assess-stats">
+          <div class="stat-card">
+            <div class="stat-num">9</div>
+            <div class="stat-label">C9 已收录详情</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">433</div>
+            <div class="stat-label">教育部推免院校</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">67</div>
+            <div class="stat-label">2025 新增</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
