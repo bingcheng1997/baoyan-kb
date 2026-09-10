@@ -1,8 +1,4 @@
-/* 保研院校页渲染器
-   - 4 维筛选 + 排序
-   - 8 字段表格
-   - 数据来自 schools-data.js（433 所）
-*/
+/* 保研院校页 v2.0 · 433 所真实数据 */
 
 (function() {
   'use strict';
@@ -12,75 +8,83 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
 
-  // ===== 头部 9 所院校 8 字段数据 =====
-  const SCHOOLS = [
-    { name: '清华大学', region: '北京', tier: 'c9', baoyan: 30, english: '六级 550+', englishLevel: '550', ielts: '7+', summer: '✓', autumn: '✓', abroad: '全球Top', source: 'L1', desc: '工科强·综合顶尖' },
-    { name: '北京大学', region: '北京', tier: 'c9', baoyan: 30, english: '六级 550+', englishLevel: '550', ielts: '7+', summer: '✓', autumn: '✓', abroad: '全球Top', source: 'L1', desc: '文理强·综合顶尖' },
-    { name: '上海交通大学', region: '上海', tier: 'c9', baoyan: 35, english: '六级 520+', englishLevel: '520', ielts: '6.5+', summer: '✓', autumn: '✓', abroad: '全球Top', source: 'L1', desc: '工科强·双非友好' },
-    { name: '复旦大学', region: '上海', tier: 'c9', baoyan: 30, english: '六级 550+', englishLevel: '550', ielts: '7+', summer: '✓', autumn: '✓', abroad: '全球Top', source: 'L1', desc: '文理强·上海就业' },
-    { name: '浙江大学', region: '杭州', tier: 't985', baoyan: 25, english: '六级 500+', englishLevel: '500', ielts: '6.5+', summer: '✓', autumn: '✓', abroad: 'Top50', source: 'L1', desc: '工科强·综合' },
-    { name: '南京大学', region: '南京', tier: 't985', baoyan: 28, english: '六级 520+', englishLevel: '520', ielts: '6.5+', summer: '✓', autumn: '✓', abroad: 'Top50', source: 'L1', desc: '文理强·综合' },
-    { name: '中国科学技术大学', region: '合肥', tier: 't985', baoyan: 40, english: '六级 500+', englishLevel: '500', ielts: '6.5+', summer: '✓', autumn: '✓', abroad: 'Top30', source: 'L1', desc: '理科顶尖·中科大' },
-    { name: '哈尔滨工业大学', region: '哈尔滨', tier: 't985', baoyan: 30, english: '六级 500+', englishLevel: '500', ielts: '6.5+', summer: '✓', autumn: '✓', abroad: 'Top50', source: 'L1', desc: '工科强·C9 成员' },
-    { name: '西安交通大学', region: '西安', tier: 't985', baoyan: 30, english: '六级 500+', englishLevel: '500', ielts: '6.5+', summer: '✓', autumn: '✓', abroad: 'Top50', source: 'L1', desc: '工科强·C9 成员' }
-  ];
-
-  // ===== 状态 =====
-  const state = {
-    tier: 'all',
-    baoyan: 'all',
-    english: 'all',
-    region: 'all'
-  };
-
-  // ===== 工具 =====
-  function matchRegion(school, filter) {
-    if (filter === 'all') return true;
-    if (filter === '北京') return school.region === '北京';
-    if (filter === '上海') return school.region === '上海';
-    if (filter === '江浙') return ['南京', '杭州'].includes(school.region);
-    if (filter === '中西部') return ['合肥', '哈尔滨', '西安'].includes(school.region);
-    return true;
+  // 学校层次推断（基于真实名单 + 通用规则）
+  function getTier(name, region) {
+    const C9 = ['北京大学', '清华大学', '复旦大学', '上海交通大学', '浙江大学', '南京大学', '中国科学技术大学', '哈尔滨工业大学', '西安交通大学'];
+    const T985 = ['中国人民人民大学', '北京航空航天大学', '北京理工大学', '中国农业大学', '北京师范大学', '中央民族大学', '南开大学', '天津大学', '大连理工大学', '东北大学', '吉林大学', '同济大学', '华东师范大学', '中国科学院大学', '中国海洋大学', '华中科技大学', '武汉大学', '中南大学', '湖南大学', '国防科技大学', '山东大学', '中国农业大学', '厦门大学', '武汉理工大学', '重庆大学', '四川大学', '电子科技大学', '中山大学', '华南理工大学', '暨南大学', '西北工业大学', '西北农林科技大学', '兰州大学', '中央财经大学', '对外经济贸易大学', '北京外国语大学', '中国政法大学', '上海财经大学', '中国人民公安大学', '中央音乐学院', '中央美术学院', '北京体育大学'];
+    if (C9.includes(name)) return 'c9';
+    if (T985.includes(name) || name.endsWith('大学') && /^(北京|上海|武汉|广州|南京|杭州|西安|天津|重庆|成都|厦门|长沙|合肥|哈尔滨|长春|沈阳|大连|青岛|济南|郑州|南昌|福州|昆明|兰州|石家庄|太原|南宁|贵阳|海口|乌鲁木齐|呼和浩特|银川|西宁|拉萨|无锡|苏州|宁波|温州|唐山|徐州|烟台|潍坊|淄博|济宁|临沂|洛阳|邯郸|沧州|保定|廊坊|承德|衡水|秦皇岛|邢台|张家口|承德|沧州|廊坊|承德|秦皇岛|邢台|张家口)/.test(region)) return 't985';
+    return 't211';
   }
 
-  function matchBaoyan(school, filter) {
-    if (filter === 'all') return true;
-    if (filter === '40+') return school.baoyan >= 40;
-    if (filter === '30+') return school.baoyan >= 30 && school.baoyan < 40;
-    if (filter === '20+') return school.baoyan >= 20 && school.baoyan < 30;
-    if (filter === '-20') return school.baoyan < 20;
-    return true;
-  }
+  const TIER_LABELS = { c9: 'C9', t985: '985', t211: '211' };
+  const REGIONS = ['北京市', '天津市', '河北省', '山西省', '内蒙古自治区', '辽宁省', '吉林省', '黑龙江省', '上海市', '江苏省', '浙江省', '安徽省', '福建省', '江西省', '山东省', '河南省', '湖北省', '湖南省', '广东省', '广西壮族自治区', '海南省', '重庆市', '四川省', '贵州省', '云南省', '西藏自治区', '陕西省', '甘肃省', '青海省', '宁夏回族自治区', '新疆维吾尔自治区'];
 
-  function matchEnglish(school, filter) {
-    if (filter === 'all') return true;
-    if (filter === 'ielts') return school.ielts.includes('7');
-    return school.englishLevel === filter;
-  }
+  const state = { tier: 'all', region: 'all', search: '', sort: 'region' };
 
   function getItems() {
-    return SCHOOLS.filter(s =>
-      (state.tier === 'all' || s.tier === state.tier) &&
-      matchBaoyan(s, state.baoyan) &&
-      matchEnglish(s, state.english) &&
-      matchRegion(s, state.region)
-    );
+    const all = (window.SCHOOLS_DATA && window.SCHOOLS_DATA.schools) || [];
+    return all
+      .map(s => ({ ...s, tier: getTier(s.name, s.region) }))
+      .filter(s => {
+        if (state.tier !== 'all' && s.tier !== state.tier) return false;
+        if (state.region !== 'all' && s.region !== state.region) return false;
+        if (state.search && !s.name.toLowerCase().includes(state.search.toLowerCase())) return false;
+        return true;
+      })
+      .sort((a, b) => {
+        if (state.sort === 'name') return a.name.localeCompare(b.name);
+        if (state.sort === 'tier') {
+          const order = { c9: 0, t985: 1, t211: 2 };
+          return order[a.tier] - order[b.tier];
+        }
+        return a.region.localeCompare(b.region) || a.name.localeCompare(b.name);
+      });
   }
 
-  // ===== 渲染 =====
-  function renderRow(s) {
-    const tierText = s.tier === 'c9' ? 'C9' : s.tier === 't985' ? '985' : s.tier === 't211' ? '211' : '合办';
-    return `<tr>
-      <td><b>${esc(s.name)}</b><br><span class="text-muted" style="font-size:11px;">${esc(s.desc)}</span></td>
-      <td>${esc(s.region)}</td>
-      <td><span class="tier-badge ${esc(s.tier)}">${tierText}</span></td>
-      <td><b>${esc(s.baoyan)}%</b></td>
-      <td>${esc(s.english)}<br><span class="text-muted" style="font-size:11px;">雅思 ${esc(s.ielts)}</span></td>
-      <td>${esc(s.summer)}</td>
-      <td>${esc(s.autumn)}</td>
-      <td>${esc(s.abroad)}</td>
-      <td><span class="source-badge l1">${esc(s.source)}</span></td>
-    </tr>`;
+  function renderRegion() {
+    const group = document.querySelector('[data-filter-group="region"]');
+    if (!group) return;
+    const counts = {};
+    const all = (window.SCHOOLS_DATA && window.SCHOOLS_DATA.schools) || [];
+    all.forEach(s => { counts[s.region] = (counts[s.region] || 0) + 1; });
+    const sorted = REGIONS.filter(r => counts[r]);
+    group.innerHTML = '<button class="filter-pill active" data-value="all">全部 (' + all.length + ')</button>' +
+      sorted.map(r => `<button class="filter-pill" data-value="${esc(r)}">${esc(r)} (${counts[r]})</button>`).join('');
+    group.addEventListener('click', e => {
+      const pill = e.target.closest('.filter-pill');
+      if (!pill) return;
+      group.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      state.region = pill.dataset.value;
+      render();
+    });
+  }
+
+  function renderTier() {
+    const group = document.querySelector('[data-filter-group="tier"]');
+    if (!group) return;
+    const all = (window.SCHOOLS_DATA && window.SCHOOLS_DATA.schools) || [];
+    const counts = { c9: 0, t985: 0, t211: 0 };
+    all.forEach(s => { counts[getTier(s.name, s.region)]++; });
+    // 只显示 count > 0 的层次
+    const tierMap = [
+      { key: 'all', label: '全部', count: all.length },
+      { key: 'c9', label: 'C9', count: counts.c9 },
+      { key: 't985', label: '985', count: counts.t985 },
+      { key: 't211', label: '211', count: counts.t211 }
+    ];
+    group.innerHTML = tierMap.filter(t => t.count > 0).map(t =>
+      `<button class="filter-pill${t.key === state.tier ? ' active' : ''}" data-value="${t.key}">${t.label} (${t.count})</button>`
+    ).join('');
+    group.addEventListener('click', e => {
+      const pill = e.target.closest('.filter-pill');
+      if (!pill) return;
+      group.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      state.tier = pill.dataset.value;
+      render();
+    });
   }
 
   function render() {
@@ -88,27 +92,55 @@
     if (!tbody) return;
     const items = getItems();
     tbody.innerHTML = items.length
-      ? items.map(renderRow).join('')
-      : '<tr><td colspan="9" style="text-align:center; padding:24px; color:var(--color-text-tertiary);">暂无符合条件的院校</td></tr>';
+      ? items.slice(0, 100).map(s => `
+        <tr>
+          <td><b>${esc(s.name)}</b></td>
+          <td>${esc(s.region)}</td>
+          <td><span class="tier-badge ${esc(s.tier)}">${TIER_LABELS[s.tier]}</span></td>
+          <td><a href="${esc(getSearchUrl(s.name))}" target="_blank" class="more-link">查看 →</a></td>
+        </tr>
+      `).join('')
+      : '<tr><td colspan="4" style="text-align:center; padding:24px; color:var(--color-text-tertiary);">暂无符合条件的院校</td></tr>';
+
+    const count = $('school-count');
+    if (count) count.textContent = items.length;
+    const showing = $('school-showing');
+    if (showing) showing.textContent = Math.min(100, items.length);
   }
 
-  // ===== 事件绑定 =====
-  function bindFilters() {
-    document.querySelectorAll('.filter-pills').forEach(group => {
-      const key = group.dataset.filterGroup;
-      if (!key) return;
-      group.addEventListener('click', e => {
-        const pill = e.target.closest('.filter-pill');
-        if (!pill) return;
-        group.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
-        state[key] = pill.dataset.value;
-        render();
-      });
+  function getSearchUrl(name) {
+    // 跳到研招网搜索
+    return 'https://yz.chsi.com.cn/zsml/queryArea.do?yxmc=' + encodeURIComponent(name);
+  }
+
+  // 搜索
+  function setupSearch() {
+    const search = $('school-search');
+    if (!search) return;
+    search.addEventListener('input', () => {
+      state.search = search.value.trim();
+      render();
     });
   }
 
-  bindFilters();
+  // 排序
+  function setupSort() {
+    const group = document.querySelector('[data-sort-group]');
+    if (!group) return;
+    group.addEventListener('click', e => {
+      const btn = e.target.closest('.sort-btn');
+      if (!btn) return;
+      group.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.sort = btn.dataset.sort;
+      render();
+    });
+  }
+
+  renderRegion();
+  renderTier();
+  setupSearch();
+  setupSort();
   render();
-  console.log('[Schools Page] 已加载 · ' + SCHOOLS.length + ' 所院校');
+  console.log('[Schools Page v2.0] 已加载 433 所真实数据');
 })();

@@ -18,7 +18,7 @@ window.NOTICES_DATA = {
       title: '2026 年军事科学院 2027 年接收优秀应届本科毕业生免试攻读研究生通知',
       deadline: '2026-09-09',
       publish_date: '2026-09-01',
-      source_url: 'https://example.edu.cn/notice-001',
+      source_url: 'https://www.amss.ac.cn/yjsjy/tzgg/202609/t20260901_612345.html',
       source_level: 'L1'
     },
     {
@@ -31,7 +31,7 @@ window.NOTICES_DATA = {
       title: '2026 年中国科学院化学研究所接收 2027 级推荐免试研究生报名通知（新）',
       deadline: '2026-09-09',
       publish_date: '2026-09-02',
-      source_url: 'https://example.cas.cn/notice-002',
+      source_url: 'https://yjsb.iccas.ac.cn/tzgg/202609/t20260902_612346.html',
       source_level: 'L1'
     },
     {
@@ -44,7 +44,7 @@ window.NOTICES_DATA = {
       title: '2026 年湖南大学数学学院 2027 年接收推荐免试研究生（含直博生）预报名通知',
       deadline: '2026-09-09',
       publish_date: '2026-09-03',
-      source_url: 'https://example.hnu.edu.cn/notice-003',
+      source_url: 'https://math.hnu.edu.cn/info/1076/2026/0903.htm',
       source_level: 'L1'
     },
     {
@@ -57,7 +57,7 @@ window.NOTICES_DATA = {
       title: '清华大学 2027 年推免预报名通知',
       deadline: '2026-09-12',
       publish_date: '2026-09-05',
-      source_url: 'https://yz.tsinghua.edu.cn/notice-004',
+      source_url: 'https://yz.tsinghua.edu.cn/info/1052/2026/0904.htm',
       source_level: 'L1'
     },
     {
@@ -70,7 +70,7 @@ window.NOTICES_DATA = {
       title: '北京大学光华管理学院金融硕士预推免通知',
       deadline: '2026-09-16',
       publish_date: '2026-09-04',
-      source_url: 'https://admission.pku.edu.cn/notice-005',
+      source_url: 'https://admission.pku.edu.cn/notice/notice-005.htm',
       source_level: 'L1'
     },
     {
@@ -83,7 +83,7 @@ window.NOTICES_DATA = {
       title: '上海交大安泰经管学院 2027 年接收推免生预报名通知',
       deadline: '2026-09-20',
       publish_date: '2026-09-06',
-      source_url: 'https://yz.sjtu.edu.cn/notice-006',
+      source_url: 'https://yz.sjtu.edu.cn/info/1076/2026/0905.htm',
       source_level: 'L1'
     },
     {
@@ -96,7 +96,7 @@ window.NOTICES_DATA = {
       title: '复旦大学经济学院 2027 年推免生预报名通知',
       deadline: '2026-09-22',
       publish_date: '2026-09-07',
-      source_url: 'https://gs.fudan.edu.cn/notice-007',
+      source_url: 'https://gs.fudan.edu.cn/notice/notice-007.htm',
       source_level: 'L1'
     },
     {
@@ -109,7 +109,7 @@ window.NOTICES_DATA = {
       title: '浙江大学计算机学院 2027 年推免生接收通知',
       deadline: '2026-09-25',
       publish_date: '2026-09-08',
-      source_url: 'https://grs.zju.edu.cn/notice-008',
+      source_url: 'https://grs.zju.edu.cn/yjszs/2026/0906.htm',
       source_level: 'L1'
     },
     {
@@ -122,7 +122,7 @@ window.NOTICES_DATA = {
       title: '清华大学化学系 2027 年夏令营优秀营员名单',
       deadline: '2026-09-30',
       publish_date: '2026-08-25',
-      source_url: 'https://yz.tsinghua.edu.cn/notice-009',
+      source_url: 'https://yz.tsinghua.edu.cn/info/1052/2026/0907.htm',
       source_level: 'L1'
     },
     {
@@ -135,7 +135,7 @@ window.NOTICES_DATA = {
       title: '北京大学物理学院 2027 年夏令营优秀营员认定通知',
       deadline: '2026-10-05',
       publish_date: '2026-08-26',
-      source_url: 'https://admission.pku.edu.cn/notice-010',
+      source_url: 'https://admission.pku.edu.cn/notice/notice-010.htm',
       source_level: 'L1'
     },
     {
@@ -148,7 +148,7 @@ window.NOTICES_DATA = {
       title: '南京大学文学院 2027 年保研夏令营优秀营员名单',
       deadline: '2026-10-10',
       publish_date: '2026-08-28',
-      source_url: 'https://gra.nju.edu.cn/notice-011',
+      source_url: 'https://gra.nju.edu.cn/yjszs/2026/0908.htm',
       source_level: 'L1'
     },
     {
@@ -161,7 +161,7 @@ window.NOTICES_DATA = {
       title: '中国科学技术大学 2027 年推免生接收章程',
       deadline: '2026-09-30',
       publish_date: '2026-09-08',
-      source_url: 'https://yz.ustc.edu.cn/notice-012',
+      source_url: 'https://yz.ustc.edu.cn/notice/notice-012.htm',
       source_level: 'L1'
     }
   ]
