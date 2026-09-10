@@ -644,3 +644,100 @@
 .matrix-active-col:not(.grade-active) {
   opacity: 0.5;
 }
+
+/* ===== 右栏 4 卡片 Tab 整合 ===== */
+.mini-block-group {
+  background: white;
+  border: 1px solid var(--color-border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.mini-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border-color);
+}
+.mini-tab {
+  padding: 12px 4px;
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s;
+}
+.mini-tab:hover {
+  background: white;
+  color: var(--color-xdf-green);
+}
+.mini-tab.active {
+  background: white;
+  color: var(--color-xdf-green);
+  border-bottom-color: var(--color-xdf-green);
+  font-weight: 700;
+}
+.mini-tab-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+.mini-pane {
+  display: none;
+  padding: 16px;
+}
+.mini-pane.active {
+  display: block;
+}
+.mini-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.mini-block-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+.mini-block-desc {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+.mini-block-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-sm,
+.form-select.form-sm,
+.form-input.form-sm {
+  padding: 6px 10px;
+  font-size: 12px;
+  border: 1px solid var(--color-border-color);
+  border-radius: 4px;
+  background: white;
+  font-family: inherit;
+}
+.btn-primary.btn-sm {
+  padding: 8px 12px;
+  background: var(--color-xdf-green);
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn-primary.btn-sm:hover {
+  background: var(--color-xdf-green-dark);
+}

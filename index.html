@@ -276,91 +276,109 @@
         </div>
       </div>
 
-      <!-- ===== 整体右栏（4 卡片：智能评估 + 时间点提醒 + 黑话 + 百问）===== -->
+      <!-- ===== 整体右栏（4 卡片整合为一个分组 + Tab 切换）===== -->
       <aside class="right-sidebar">
-        <!-- 1. 智能评估（核心工具） -->
-        <div class="mini-block mini-block-green">
-          <div class="mini-block-header">
-            <div class="mini-block-icon">🎯</div>
-            <div class="mini-block-title">智能评估</div>
-            <span class="mini-block-count">v1.0</span>
+        <div class="mini-block-group">
+          <!-- Tab 切换器 -->
+          <div class="mini-tabs">
+            <button class="mini-tab active" data-mini-tab="assess">
+              <span class="mini-tab-icon">🎯</span>
+              <span class="mini-tab-text">评估</span>
+            </button>
+            <button class="mini-tab" data-mini-tab="time">
+              <span class="mini-tab-icon">⏰</span>
+              <span class="mini-tab-text">时间</span>
+            </button>
+            <button class="mini-tab" data-mini-tab="glossary">
+              <span class="mini-tab-icon">📖</span>
+              <span class="mini-tab-text">黑话</span>
+            </button>
+            <button class="mini-tab" data-mini-tab="faq">
+              <span class="mini-tab-icon">❓</span>
+              <span class="mini-tab-text">问答</span>
+            </button>
           </div>
-          <p class="mini-block-desc">10 维输入 · 冲稳保 15 所</p>
-          <form class="mini-block-form" action="pages/intro.html" method="get">
-            <select name="school" class="form-select form-select-sm">
-              <option value="">本科层次</option>
-              <option value="c9">C9</option>
-              <option value="985">985</option>
-              <option value="211">211</option>
-              <option value="double-non-top">双非头部</option>
-            </select>
-            <input type="number" name="rank" min="1" max="100" placeholder="排名 %" class="form-input form-input-sm">
-            <select name="english" class="form-select form-select-sm">
-              <option value="">英语成绩</option>
-              <option value="cet6-500">六级 500+</option>
-              <option value="ielts-7">雅思 7+</option>
-            </select>
-            <button type="submit" class="btn btn-primary btn-sm">→ 出结果</button>
-          </form>
-        </div>
 
-        <!-- 2. 时间点提醒 -->
-        <div class="mini-block">
-          <div class="mini-block-header">
-            <div class="mini-block-icon">⏰</div>
-            <div class="mini-block-title">时间点提醒</div>
+          <!-- Tab 1: 智能评估 -->
+          <div class="mini-pane active" id="pane-assess">
+            <div class="mini-block-header">
+              <div class="mini-block-title">智能评估</div>
+              <span class="mini-block-count">v1.0</span>
+            </div>
+            <p class="mini-block-desc">10 维输入 · 冲稳保 15 所</p>
+            <form class="mini-block-form" action="pages/intro.html" method="get">
+              <select name="school" class="form-select form-sm">
+                <option value="">本科层次</option>
+                <option value="c9">C9</option>
+                <option value="985">985</option>
+                <option value="211">211</option>
+                <option value="double-non-top">双非头部</option>
+              </select>
+              <input type="number" name="rank" min="1" max="100" placeholder="排名 %" class="form-input form-sm">
+              <select name="english" class="form-select form-sm">
+                <option value="">英语成绩</option>
+                <option value="cet6-500">六级 500+</option>
+                <option value="ielts-7">雅思 7+</option>
+              </select>
+              <button type="submit" class="btn btn-primary btn-sm">→ 出结果</button>
+            </form>
           </div>
-          <div class="time-reminder">
-            <div class="time-item urgent">
-              <span class="time-event">9.22 推免填报</span>
-              <span class="time-count">13 天</span>
-            </div>
-            <div class="time-item">
-              <span class="time-event">9.28 复试</span>
-              <span class="time-count">19 天</span>
-            </div>
-            <div class="time-item">
-              <span class="time-event">10.20 录取截止</span>
-              <span class="time-count">41 天</span>
-            </div>
-          </div>
-          <a href="pages/notices.html" class="side-link-more">→ 全部通知</a>
-        </div>
 
-        <!-- 3. 黑话精选 -->
-        <div class="mini-block">
-          <div class="mini-block-header">
-            <div class="mini-block-icon">📖</div>
-            <div class="mini-block-title">黑话精选</div>
-            <span class="mini-block-count">6/121</span>
+          <!-- Tab 2: 时间点提醒 -->
+          <div class="mini-pane" id="pane-time">
+            <div class="mini-block-header">
+              <div class="mini-block-title">时间点提醒</div>
+            </div>
+            <div class="time-reminder">
+              <div class="time-item urgent">
+                <span class="time-event">9.22 推免填报</span>
+                <span class="time-count">13 天</span>
+              </div>
+              <div class="time-item">
+                <span class="time-event">9.28 复试</span>
+                <span class="time-count">19 天</span>
+              </div>
+              <div class="time-item">
+                <span class="time-event">10.20 录取截止</span>
+                <span class="time-count">41 天</span>
+              </div>
+            </div>
+            <a href="pages/notices.html" class="side-link-more">→ 全部通知</a>
           </div>
-          <div class="glossary-mini">
-            <span class="glossary-mini-item"><span class="glossary-mini-term">推免</span><span class="glossary-mini-def">推荐免试攻读研究生</span></span>
-            <span class="glossary-mini-item"><span class="glossary-mini-term">夏令营</span><span class="glossary-mini-def">5-7 月各校提前招生</span></span>
-            <span class="glossary-mini-item"><span class="glossary-mini-term">九推</span><span class="glossary-mini-def">9.28 推免系统</span></span>
-            <span class="glossary-mini-item"><span class="glossary-mini-term">预推免</span><span class="glossary-mini-def">9 月推免前批次</span></span>
-            <span class="glossary-mini-item"><span class="glossary-mini-term">套磁</span><span class="glossary-mini-def">提前联系导师</span></span>
-            <span class="glossary-mini-item"><span class="glossary-mini-term">BG</span><span class="glossary-mini-def">综合学术背景</span></span>
-          </div>
-          <a href="pages/glossary.html" class="side-link-more">→ 全部 121 黑话</a>
-        </div>
 
-        <!-- 4. 百问百答 -->
-        <div class="mini-block">
-          <div class="mini-block-header">
-            <div class="mini-block-icon">❓</div>
-            <div class="mini-block-title">百问百答</div>
-            <span class="mini-block-count">6/31</span>
+          <!-- Tab 3: 黑话精选 -->
+          <div class="mini-pane" id="pane-glossary">
+            <div class="mini-block-header">
+              <div class="mini-block-title">黑话精选</div>
+              <span class="mini-block-count">6/121</span>
+            </div>
+            <div class="glossary-mini">
+              <span class="glossary-mini-item"><span class="glossary-mini-term">推免</span><span class="glossary-mini-def">推荐免试攻读研究生</span></span>
+              <span class="glossary-mini-item"><span class="glossary-mini-term">夏令营</span><span class="glossary-mini-def">5-7 月各校提前招生</span></span>
+              <span class="glossary-mini-item"><span class="glossary-mini-term">九推</span><span class="glossary-mini-def">9.28 推免系统</span></span>
+              <span class="glossary-mini-item"><span class="glossary-mini-term">预推免</span><span class="glossary-mini-def">9 月推免前批次</span></span>
+              <span class="glossary-mini-item"><span class="glossary-mini-term">套磁</span><span class="glossary-mini-def">提前联系导师</span></span>
+              <span class="glossary-mini-item"><span class="glossary-mini-term">BG</span><span class="glossary-mini-def">综合学术背景</span></span>
+            </div>
+            <a href="pages/glossary.html" class="side-link-more">→ 全部 121 黑话</a>
           </div>
-          <div class="faq-mini">
-            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">保研什么时候开始准备？</span></a>
-            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">双非能保到清北吗？</span></a>
-            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">六级多少分够用？</span></a>
-            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">科研和竞赛哪个更重要？</span></a>
-            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">夏令营和预推免能同时报吗？</span></a>
-            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">保研失败怎么转留学？</span></a>
+
+          <!-- Tab 4: 百问百答 -->
+          <div class="mini-pane" id="pane-faq">
+            <div class="mini-block-header">
+              <div class="mini-block-title">百问百答</div>
+              <span class="mini-block-count">6/31</span>
+            </div>
+            <div class="faq-mini">
+              <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">保研什么时候开始准备？</span></a>
+              <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">双非能保到清北吗？</span></a>
+              <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">六级多少分够用？</span></a>
+              <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">科研和竞赛哪个更重要？</span></a>
+              <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">夏令营和预推免能同时报吗？</span></a>
+              <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">保研失败怎么转留学？</span></a>
+            </div>
+            <a href="pages/faq.html" class="side-link-more">→ 全部 31 问答</a>
           </div>
-          <a href="pages/faq.html" class="side-link-more">→ 全部 31 问答</a>
         </div>
       </aside>
     </div>

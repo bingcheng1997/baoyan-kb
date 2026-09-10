@@ -177,6 +177,22 @@
     document.querySelector('.matrix-active-col[data-col="3"]').classList.add('grade-active');
   }
 
+  // ===== 右栏 4 卡片 Tab 切换 =====
+  function setupMiniTabs() {
+    document.querySelectorAll('.mini-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.miniTab;
+        // 切换 tab active
+        document.querySelectorAll('.mini-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        // 切换 pane
+        document.querySelectorAll('.mini-pane').forEach(p => p.classList.remove('active'));
+        const pane = document.getElementById('pane-' + target);
+        if (pane) pane.classList.add('active');
+      });
+    });
+  }
+
   // ===== 启动 =====
   setupMatrix();
   renderHomeNotices();
@@ -184,6 +200,7 @@
   renderHomeInterview();
   setupPillFilters();
   setupGradeSwitch();
+  setupMiniTabs();
 
   console.log('[Home v4.0] 渲染完成');
 })();
