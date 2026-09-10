@@ -806,3 +806,110 @@
   opacity: 0.3;
   cursor: not-allowed;
 }
+
+/* 状态色色盲友好：加图标前缀 */
+.status-tag.urgent::before { content: '🔴 '; }
+.status-tag.warning::before { content: '🟡 '; }
+.status-tag.normal::before { content: '🟢 '; }
+
+/* 通知页色盲友好 */
+.notice-status-today::before { content: '🔴 '; }
+.notice-status-urgent::before { content: '🟡 '; }
+.notice-status-signup::before { content: '🟢 '; }
+
+/* Footer 4 列 */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 32px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-border-color);
+}
+@media (min-width: 768px) {
+  .footer-grid { grid-template-columns: repeat(4, 1fr); }
+}
+.footer-col h4 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary);
+  margin: 0 0 8px;
+}
+.footer-col a, .footer-col p {
+  display: block;
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  margin: 4px 0;
+  text-decoration: none;
+}
+.footer-col a:hover { color: var(--color-xdf-green); }
+
+/* ===== Command Palette ===== */
+.cmd-palette {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
+}
+.cmd-palette.open { display: flex; }
+.cmd-palette-box {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 560px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+#cmd-palette-input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--color-border-color);
+  padding: 16px 20px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: 0;
+}
+.cmd-palette-results {
+  max-height: 360px;
+  overflow-y: auto;
+}
+.cmd-palette-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-bg-secondary);
+}
+.cmd-palette-item:hover { background: var(--color-bg-secondary); }
+.cmd-palette-item-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+.cmd-palette-item-type {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+}
+.cmd-palette-empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-size: 13px;
+}
+.cmd-palette-hint {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px;
+  background: var(--color-bg-secondary);
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+}
