@@ -11,17 +11,6 @@
 </head>
 <body>
 
-<!-- ===== 顶部信任条 + 5 数据徽章 ===== -->
-<div class="trust-bar">
-  <div class="trust-bar-inner">
-    <span class="data-mini">433 院校</span>
-    <span class="data-mini">12 通知</span>
-    <span class="data-mini">4 案例</span>
-    <span class="data-mini">121 黑话</span>
-    <span class="data-mini">31 问答</span>
-  </div>
-</div>
-
 <!-- ===== Header（5 项导航）===== -->
 <header class="site-header">
   <div class="header-main">
@@ -70,90 +59,98 @@
   <div class="container">
     <h2 class="section-title">保研时间规划轴</h2>
 
+    <!-- 年级切换器 -->
+    <div class="grade-switch" id="grade-switch">
+      <button class="grade-btn" data-grade="1">大一</button>
+      <button class="grade-btn" data-grade="2">大二</button>
+      <button class="grade-btn active" data-grade="3">大三 ★</button>
+      <button class="grade-btn" data-grade="4">大四</button>
+    </div>
+
     <div class="matrix-wrap">
       <table class="matrix-table">
         <thead>
           <tr>
             <th></th>
-            <th class="matrix-col-header">大一</th>
-            <th class="matrix-col-header">大二</th>
-            <th class="matrix-col-header current">大三 ★9月-12月</th>
-            <th class="matrix-col-header">大四</th>
+            <th class="matrix-col-header matrix-active-col" data-col="1">大一</th>
+            <th class="matrix-col-header matrix-active-col" data-col="2">大二</th>
+            <th class="matrix-col-header current matrix-active-col" data-col="3">大三 ★9月-12月</th>
+            <th class="matrix-col-header matrix-active-col" data-col="4">大四</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th class="matrix-row-header">校内 GPA</th>
-            <td class="matrix-cell" data-row="gpa" data-col="1">
+            <td class="matrix-cell matrix-active-cell" data-row="gpa" data-col="1">
               <b>保持高 GPA</b>
               <span class="text-muted">理性选课 / 探索专业兴趣</span>
             </td>
-            <td class="matrix-cell" data-row="gpa" data-col="2">
+            <td class="matrix-cell matrix-active-cell" data-row="gpa" data-col="2">
               <b>保持高 GPA</b>
               <span class="text-muted">重视专业课 / 明确未来专业</span>
             </td>
-            <td class="matrix-cell current" data-row="gpa" data-col="3">
+            <td class="matrix-cell current matrix-active-cell" data-row="gpa" data-col="3">
               <b>保持高 GPA</b>
               <span class="text-muted">提前了解保研政策 / 明确院校专业 / 获取本校保研名额</span>
             </td>
-            <td class="matrix-cell" data-row="gpa" data-col="4">
+            <td class="matrix-cell matrix-active-cell" data-row="gpa" data-col="4">
               <b>确认保研资格</b>
               <span class="text-muted">确保顺利保研 / 准备毕业论文</span>
             </td>
           </tr>
           <tr>
             <th class="matrix-row-header">英语成绩</th>
-            <td class="matrix-cell" data-row="english" data-col="1">
+            <td class="matrix-cell matrix-active-cell" data-row="english" data-col="1">
               <b>积累词汇基础</b>
               <span class="text-muted">备考四级 / 初学托福雅思</span>
             </td>
-            <td class="matrix-cell" data-row="english" data-col="2">
+            <td class="matrix-cell matrix-active-cell" data-row="english" data-col="2">
               <b>备考六级</b>
               <span class="text-muted">备考托福雅思，提升英语竞争力</span>
             </td>
-            <td class="matrix-cell current" data-row="english" data-col="3">
+            <td class="matrix-cell current matrix-active-cell" data-row="english" data-col="3">
               <b>冲刺托福/雅思</b>
               <span class="text-muted">提前准备保研所需文书及资料 / 准备保研相关面试 / 参与夏令营</span>
             </td>
-            <td class="matrix-cell" data-row="english" data-col="4">
+            <td class="matrix-cell matrix-active-cell" data-row="english" data-col="4">
               <b>准备面试</b>
               <span class="text-muted">强化口语及写作能力</span>
             </td>
           </tr>
           <tr>
             <th class="matrix-row-header">实习科研</th>
-            <td class="matrix-cell" data-row="research" data-col="1">
+            <td class="matrix-cell matrix-active-cell" data-row="research" data-col="1">
               <b>参与社团活动</b>
               <span class="text-muted">报名基础竞赛 / 积累实习科研入门经验</span>
             </td>
-            <td class="matrix-cell" data-row="research" data-col="2">
+            <td class="matrix-cell matrix-active-cell" data-row="research" data-col="2">
               <b>参加各类相关竞赛</b>
               <span class="text-muted">参与实习科研等，争取论文发表机会</span>
             </td>
-            <td class="matrix-cell current" data-row="research" data-col="3">
+            <td class="matrix-cell current matrix-active-cell" data-row="research" data-col="3">
               <b>参与高含金量实习科研</b>
               <span class="text-muted">争取高水平论文发表</span>
             </td>
-            <td class="matrix-cell" data-row="research" data-col="4">
+            <td class="matrix-cell matrix-active-cell" data-row="research" data-col="4">
               <b>可继续参与实习</b>
               <span class="text-muted">可提前加入研究生导师的实验室</span>
             </td>
           </tr>
           <tr>
             <th class="matrix-row-header">保研相关</th>
-            <td class="matrix-cell" data-row="baoyan" data-col="1">
+            <td class="matrix-cell matrix-active-cell" data-row="baoyan" data-col="1">
               <b>明确后续升学意向</b>
               <span class="text-muted">了解往届保研情况</span>
             </td>
-            <td class="matrix-cell" data-row="baoyan" data-col="2">
+            <td class="matrix-cell matrix-active-cell" data-row="baoyan" data-col="2">
               <b>了解本校保研名额及要求</b>
               <span class="text-muted">明确目标院校方向</span>
             </td>
-            <td class="matrix-cell current now" data-row="baoyan" data-col="3">
+            <td class="matrix-cell current now matrix-active-cell" data-row="baoyan" data-col="3">
               <b>★5-7月参加保研夏令营</b>
               <span class="text-muted">8-9月参与保研预推免</span>
             </td>
-            <td class="matrix-cell" data-row="baoyan" data-col="4">
+            <td class="matrix-cell matrix-active-cell" data-row="baoyan" data-col="4">
               <b>★9月确定拿到保研名额</b>
               <span class="text-muted">已有 offer 填写系统确认入读 / 无 offer 参加九推捡漏，积极调剂</span>
             </td>
@@ -163,7 +160,7 @@
     </div>
 
     <div class="matrix-legend">
-      <span class="legend-item"><span class="dot dot-current"></span> 当前学期（2026 秋）</span>
+      <span class="legend-item"><span class="dot dot-current"></span> 当前年级（点击切换）</span>
       <span class="legend-item"><span class="dot dot-now"></span> ★ 现在关键期</span>
       <span class="legend-item">点击格子 → 查看完整动作</span>
     </div>

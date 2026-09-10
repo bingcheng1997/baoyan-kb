@@ -594,3 +594,53 @@
   padding-top: 6px; border-top: 1px dashed var(--color-border-color); text-decoration: none; font-weight: 600;
 }
 .side-link-more:hover { text-decoration: underline; }
+
+/* ===== 年级切换器 ===== */
+.grade-switch {
+  display: flex;
+  gap: 8px;
+  padding: 4px;
+  background: var(--color-bg-secondary);
+  border-radius: 999px;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+.grade-btn {
+  padding: 8px 20px;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+.grade-btn:hover { color: var(--color-xdf-green); }
+.grade-btn.active {
+  background: var(--color-xdf-green);
+  color: white;
+  font-weight: 700;
+}
+
+/* ===== 年级高亮（非当前年级淡化）===== */
+.matrix-active-cell {
+  transition: all 0.2s;
+}
+.matrix-active-cell.grade-active {
+  background: rgba(255, 251, 234, 0.7);
+  border-color: #FF7D00;
+  font-weight: 600;
+}
+.matrix-active-cell:not(.grade-active) {
+  opacity: 0.45;
+}
+.matrix-active-col.grade-active {
+  background: var(--color-xdf-green) !important;
+  color: white !important;
+  font-weight: 700;
+}
+.matrix-active-col:not(.grade-active) {
+  opacity: 0.5;
+}
