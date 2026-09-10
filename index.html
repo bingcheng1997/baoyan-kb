@@ -266,59 +266,59 @@
   </div>
 </section>
 
-<!-- ===== 中央 3 section + 右栏（4 卡片：时间点提醒/黑话/百问/智能评估）===== -->
+<!-- ===== 中央分层布局（通知突出 + 院校/面试并列）===== -->
 <section class="main-sections">
   <div class="container">
+
+    <!-- 重点：通知全宽突出 -->
+    <div class="featured-notice main-featured">
+      <div class="main-block-header">
+        <h3>📢 最新保研通知</h3>
+        <a href="pages/notices.html" class="more-link">全部 →</a>
+      </div>
+      <div class="mini-table">
+        <table>
+          <tbody id="home-notice-tbody">
+            <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 下面分两栏：左 = 院校 + 面试并列 · 右 = 4 Tab -->
     <div class="main-with-right">
-      <div class="main-grid">
-        <!-- Section 1: 最新保研通知 -->
+      <div class="main-grid-2col">
         <div class="main-block">
-          <div class="main-block-header">
-            <h3>📢 最新保研通知</h3>
-            <a href="pages/notices.html" class="more-link">全部 →</a>
-          </div>
-          <div class="mini-table">
-            <table>
-              <tbody id="home-notice-tbody">
-                <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="main-block-header">
+          <h3>🎓 保研院校预览</h3>
+          <a href="pages/schools.html" class="more-link">全部 →</a>
         </div>
-
-        <!-- Section 2: 保研院校预览 -->
-        <div class="main-block">
-          <div class="main-block-header">
-            <h3>🎓 保研院校预览</h3>
-            <a href="pages/schools.html" class="more-link">全部 →</a>
-          </div>
-          <div class="mini-table">
-            <table>
-              <tbody id="home-school-tbody">
-                <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Section 3: 面试指南预览 -->
-        <div class="main-block">
-          <div class="main-block-header">
-            <h3>💬 面试指南预览</h3>
-            <a href="pages/interview.html" class="more-link">全部 →</a>
-          </div>
-          <div class="mini-table">
-            <table>
-              <tbody id="home-interview-tbody">
-                <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="mini-table">
+          <table>
+            <tbody id="home-school-tbody">
+              <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
-      <!-- ===== 整体右栏（4 卡片整合为一个分组 + Tab 切换）===== -->
-      <aside class="right-sidebar">
+      <div class="main-block">
+        <div class="main-block-header">
+          <h3>💬 面试指南预览</h3>
+          <a href="pages/interview.html" class="more-link">全部 →</a>
+        </div>
+        <div class="mini-table">
+          <table>
+            <tbody id="home-interview-tbody">
+              <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右栏（4 卡片整合为一个分组 + Tab 切换） -->
+    <aside class="right-sidebar">
         <div class="mini-block-group">
           <!-- Tab 切换器 -->
           <div class="mini-tabs">
@@ -422,6 +422,7 @@
           </div>
         </div>
       </aside>
+      </div>
     </div>
   </div>
 </section>

@@ -1331,3 +1331,35 @@
     padding: var(--space-md);
   }
 }
+/* ===== 通知页表格 V2 ===== */
+.notice-table table thead th {
+  background: var(--color-xdf-green) !important;
+  color: white !important;
+  font-size: 13px !important;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+/* 斑马纹 */
+.notice-table tbody tr:nth-child(odd) {
+  background: #FAFBFC;
+}
+.notice-table tbody tr:nth-child(even) {
+  background: white;
+}
+/* 紧急行高亮（今天/3天） */
+.notice-table tbody tr.notice-urgent {
+  background: linear-gradient(90deg, rgba(245, 63, 63, 0.06) 0%, white 100%) !important;
+  border-left: 4px solid #F53F3F;
+}
+.notice-table tbody tr.notice-urgent:hover {
+  background: linear-gradient(90deg, rgba(245, 63, 63, 0.12) 0%, white 100%) !important;
+}
+.notice-table tbody tr.notice-warning {
+  border-left: 4px solid #FF7D00;
+}
+.notice-table tbody tr.notice-warning:nth-child(odd) {
+  background: linear-gradient(90deg, rgba(255, 125, 0, 0.04) 0%, #FAFBFC 100%);
+}
+.notice-table tbody tr.notice-warning:hover {
+  background: linear-gradient(90deg, rgba(255, 125, 0, 0.08) 0%, #F0FDF4 100%) !important;
+}

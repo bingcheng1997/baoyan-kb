@@ -1062,3 +1062,72 @@
   border-radius: 50%;
   box-shadow: 0 0 0 2px rgba(255, 125, 0, 0.3);
 }
+
+/* ===== 首页分层布局（V3）===== */
+.featured-notice.main-featured {
+  background: white;
+  border: 2px solid var(--color-xdf-green);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 176, 80, 0.1);
+  margin-bottom: 24px;
+  position: relative;
+}
+.featured-notice.main-featured::before {
+  content: '★ 重要';
+  position: absolute;
+  top: -10px;
+  left: 24px;
+  background: var(--color-xdf-green);
+  color: white;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.featured-notice .main-block-header h3 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* 院校 + 面试 2 列并列 */
+.main-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .main-grid-2col { grid-template-columns: 1fr 1fr; }
+}
+.main-grid-2col .main-block {
+  background: white;
+  border: 1px solid var(--color-border-color);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+.main-grid-2col .main-block-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.main-grid-2col .mini-table {
+  font-size: 12px;
+}
+
+/* 让 main-with-right 只在桌面端分两栏 */
+@media (min-width: 1024px) {
+  .main-with-right {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 24px;
+    align-items: start;
+  }
+  .main-with-right .main-grid-2col {
+    /* 桌面端院校 + 面试 2 列合并在左栏 */
+  }
+  .main-with-right .right-sidebar {
+    /* 右栏 */
+    position: sticky;
+    top: 80px;
+  }
+}

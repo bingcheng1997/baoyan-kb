@@ -97,11 +97,19 @@
   }
 
   // ===== 渲染单行 =====
+  function getRowClass(item) {
+    const u = getUrgencyText(item.deadline);
+    if (u.cls === 'urgent') return 'notice-urgent';
+    if (u.cls === 'warning') return 'notice-warning';
+    return '';
+  }
+
   function renderRow(item) {
     const urgency = getUrgencyText(item.deadline);
     const tier = TIER_MAP[item.school_tier] || TIER_MAP.other;
+    const rowCls = getRowClass(item);
     return `
-      <tr>
+      <tr class="${rowCls}">
         <td><span class="status-tag ${urgency.cls}">${urgency.text}</span></td>
         <td>
           <b>${esc(item.school)}</b>
