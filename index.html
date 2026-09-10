@@ -7,11 +7,11 @@
 <title>保研信息聚合库 · 同一份努力，两份收获</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-additions.css">
-<link rel="stylesheet" href="styles-home-v4.css">
+<link rel="stylesheet" href="styles-home.css">
 </head>
 <body>
 
-<!-- ===== 1. 顶部信任条 + 5 数据徽章 ===== -->
+<!-- ===== 顶部信任条 + 5 数据徽章 ===== -->
 <div class="trust-bar">
   <div class="trust-bar-inner">
     <span class="data-mini">433 院校</span>
@@ -47,16 +47,15 @@
   </nav>
 </header>
 
-<!-- ===== 2. HERO（双保险主入口）===== -->
+<!-- ===== Hero 区（双保险主入口）===== -->
 <section class="hero-compact">
   <div class="hero-content">
-    <span class="section-tag">💡 双保险 · 保研+留学</span>
     <h1 class="hero-title">同一份努力，<span class="highlight">两份收获</span></h1>
     <p class="hero-subtitle">绩点 + 英语 + 科研 + 竞赛 = 保研留学共用底层资产</p>
     <div class="hero-actions">
       <a href="pages/intro.html" class="btn btn-primary btn-lg">📚 保研通识</a>
       <a href="#cases" class="btn btn-secondary btn-lg">📖 看真实路径</a>
-      <a href="pages/intro.html#english" class="btn btn-ghost btn-lg">🇬🇧 英语专项</a>
+      <a href="pages/intro.html#chapter-english" class="btn btn-ghost btn-lg">🇬🇧 英语专项</a>
     </div>
     <div class="hero-3points">
       <span>✅ 失败兜底</span>
@@ -66,14 +65,10 @@
   </div>
 </section>
 
-<!-- ===== 3. 2 维矩阵（年级 × 时间）===== -->
+<!-- ===== 时间规划轴 ===== -->
 <section class="matrix-section">
   <div class="container">
-    <div class="section-head">
-      <span class="section-tag">📅 2 维矩阵</span>
-      <h2 class="section-title">你在哪一年级？现在该做什么？</h2>
-      <p class="section-desc">横轴=时间阶段 · 纵轴=年级 · 当前格自动高亮（橙色）</p>
-    </div>
+    <h2 class="section-title">保研时间规划轴</h2>
 
     <div class="matrix-wrap">
       <table class="matrix-table">
@@ -127,14 +122,10 @@
   </div>
 </section>
 
-<!-- ===== 4. 双保险真实路径（3 案例 + 1 算账）===== -->
+<!-- ===== 双保险真实路径（3 案例）===== -->
 <section class="cases-section" id="cases">
   <div class="container">
-    <div class="section-head">
-      <span class="section-tag">🔀 双保险</span>
-      <h2 class="section-title">真实路径 · 3 个保研+留学双 offer 案例</h2>
-      <p class="section-desc">从 985 边缘到双非头部 · 同一份努力，两条路都走通</p>
-    </div>
+    <h2 class="section-title">真实路径 · 3 个保研+留学双 offer 案例</h2>
 
     <div class="cases-grid">
       <div class="case-card">
@@ -186,129 +177,82 @@
         <p class="case-quote">"保研没机会，留学照样逆袭"</p>
       </div>
     </div>
-
-    <!-- 1 张算账对比表 -->
-    <div class="cost-table-wrap">
-      <h3 class="cost-title">💰 投入产出算账 · 3 列对比</h3>
-      <table class="cost-table">
-        <thead>
-          <tr>
-            <th>维度</th>
-            <th>🎓 保研</th>
-            <th>🌍 留学</th>
-            <th>🔀 双保险</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>投入（3年）</td>
-            <td>~10 万</td>
-            <td>~50 万</td>
-            <td>~55 万</td>
-          </tr>
-          <tr>
-            <td>周期</td>
-            <td>2-3 年</td>
-            <td>1-2 年</td>
-            <td>2-3 年</td>
-          </tr>
-          <tr>
-            <td>风险</td>
-            <td>失败 0 offer</td>
-            <td>拒签 / 失败</td>
-            <td>分散风险</td>
-          </tr>
-          <tr>
-            <td>收益</td>
-            <td>985 硕士</td>
-            <td>全球 Top 30</td>
-            <td>双重收益</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="cost-source">📍 数据来源：教育部 + 行业公开数据</p>
-    </div>
   </div>
 </section>
 
-<!-- ===== 5. 中央 3 section + 右栏 ===== -->
+<!-- ===== 中央 3 section + 右栏（4 卡片：时间点提醒/黑话/百问/智能评估）===== -->
 <section class="main-sections">
   <div class="container">
-    <div class="section-head">
-      <span class="section-tag">📊 核心数据</span>
-      <h2 class="section-title">通知 · 院校 · 面试</h2>
-      <p class="section-desc">3 个高频数据板块</p>
-    </div>
+    <h2 class="section-title">通知 · 院校 · 面试</h2>
 
     <div class="main-with-right">
       <div class="main-grid">
-      <!-- Section 1: 最新保研通知 -->
-      <div class="main-block">
-        <div class="main-block-header">
-          <h3>📢 最新保研通知</h3>
-          <a href="pages/notices.html" class="more-link">全部 →</a>
+        <!-- Section 1: 最新保研通知 -->
+        <div class="main-block">
+          <div class="main-block-header">
+            <h3>📢 最新保研通知</h3>
+            <a href="pages/notices.html" class="more-link">全部 →</a>
+          </div>
+          <div class="filter-pills-inline">
+            <button class="filter-pill active">全部</button>
+            <button class="filter-pill">夏令营</button>
+            <button class="filter-pill">预推免</button>
+            <button class="filter-pill">72H 最新</button>
+          </div>
+          <div class="mini-table">
+            <table>
+              <tbody id="home-notice-tbody">
+                <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="filter-pills-inline">
-          <button class="filter-pill active">全部</button>
-          <button class="filter-pill">夏令营</button>
-          <button class="filter-pill">预推免</button>
-          <button class="filter-pill">72H 最新</button>
+
+        <!-- Section 2: 保研院校预览 -->
+        <div class="main-block">
+          <div class="main-block-header">
+            <h3>🎓 保研院校预览</h3>
+            <a href="pages/schools.html" class="more-link">全部 433 →</a>
+          </div>
+          <div class="filter-pills-inline">
+            <button class="filter-pill active">C9</button>
+            <button class="filter-pill">985</button>
+            <button class="filter-pill">211</button>
+            <button class="filter-pill">中外合办</button>
+          </div>
+          <div class="mini-table">
+            <table>
+              <tbody id="home-school-tbody">
+                <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="mini-table">
-          <table>
-            <tbody id="home-notice-tbody">
-              <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
-            </tbody>
-          </table>
+
+        <!-- Section 3: 面试指南预览 -->
+        <div class="main-block">
+          <div class="main-block-header">
+            <h3>💬 面试指南预览</h3>
+            <a href="pages/interview.html" class="more-link">全部 →</a>
+          </div>
+          <div class="filter-pills-inline">
+            <button class="filter-pill active">综合</button>
+            <button class="filter-pill">英语</button>
+            <button class="filter-pill">经验</button>
+          </div>
+          <div class="mini-table">
+            <table>
+              <tbody id="home-interview-tbody">
+                <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
-      <!-- Section 2: 保研院校预览 -->
-      <div class="main-block">
-        <div class="main-block-header">
-          <h3>🎓 保研院校预览</h3>
-          <a href="pages/schools.html" class="more-link">全部 433 →</a>
-        </div>
-        <div class="filter-pills-inline">
-          <button class="filter-pill active">C9</button>
-          <button class="filter-pill">985</button>
-          <button class="filter-pill">211</button>
-          <button class="filter-pill">中外合办</button>
-        </div>
-        <div class="mini-table">
-          <table>
-            <tbody id="home-school-tbody">
-              <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Section 3: 面试指南预览 -->
-      <div class="main-block">
-        <div class="main-block-header">
-          <h3>💬 面试指南预览</h3>
-          <a href="pages/interview.html" class="more-link">全部 →</a>
-        </div>
-        <div class="filter-pills-inline">
-          <button class="filter-pill active">综合</button>
-          <button class="filter-pill">英语</button>
-          <button class="filter-pill">经验</button>
-        </div>
-        <div class="mini-table">
-          <table>
-            <tbody id="home-interview-tbody">
-              <tr><td colspan="3" class="text-muted text-center">加载中...</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-      <!-- ===== 右栏：4 个卡片 ===== -->
+      <!-- ===== 整体右栏（4 卡片：智能评估 + 时间点提醒 + 黑话 + 百问）===== -->
       <aside class="right-sidebar">
-
-        <!-- 1. 智能评估 -->
+        <!-- 1. 智能评估（核心工具） -->
         <div class="mini-block mini-block-green">
           <div class="mini-block-header">
             <div class="mini-block-icon">🎯</div>
@@ -343,7 +287,7 @@
           <div class="time-reminder">
             <div class="time-item urgent">
               <span class="time-event">9.22 推免填报</span>
-              <span class="time-count" id="cd-days-count">13 天</span>
+              <span class="time-count">13 天</span>
             </div>
             <div class="time-item">
               <span class="time-event">9.28 复试</span>
@@ -362,35 +306,17 @@
           <div class="mini-block-header">
             <div class="mini-block-icon">📖</div>
             <div class="mini-block-title">黑话精选</div>
-            <span class="mini-block-count">6 条</span>
+            <span class="mini-block-count">6/121</span>
           </div>
           <div class="glossary-mini">
-            <a href="pages/intro.html#chapter-glossary" class="glossary-mini-item">
-              <span class="glossary-mini-term">推免</span>
-              <span class="glossary-mini-def">推荐免试攻读研究生</span>
-            </a>
-            <a href="pages/intro.html#chapter-glossary" class="glossary-mini-item">
-              <span class="glossary-mini-term">夏令营</span>
-              <span class="glossary-mini-def">5-7 月各校提前招生</span>
-            </a>
-            <a href="pages/intro.html#chapter-glossary" class="glossary-mini-item">
-              <span class="glossary-mini-term">九推</span>
-              <span class="glossary-mini-def">9.28 推免系统</span>
-            </a>
-            <a href="pages/intro.html#chapter-glossary" class="glossary-mini-item">
-              <span class="glossary-mini-term">预推免</span>
-              <span class="glossary-mini-def">9 月推免前批次</span>
-            </a>
-            <a href="pages/intro.html#chapter-glossary" class="glossary-mini-item">
-              <span class="glossary-mini-term">套磁</span>
-              <span class="glossary-mini-def">提前联系导师</span>
-            </a>
-            <a href="pages/intro.html#chapter-glossary" class="glossary-mini-item">
-              <span class="glossary-mini-term">BG</span>
-              <span class="glossary-mini-def">综合学术背景</span>
-            </a>
+            <span class="glossary-mini-item"><span class="glossary-mini-term">推免</span><span class="glossary-mini-def">推荐免试攻读研究生</span></span>
+            <span class="glossary-mini-item"><span class="glossary-mini-term">夏令营</span><span class="glossary-mini-def">5-7 月各校提前招生</span></span>
+            <span class="glossary-mini-item"><span class="glossary-mini-term">九推</span><span class="glossary-mini-def">9.28 推免系统</span></span>
+            <span class="glossary-mini-item"><span class="glossary-mini-term">预推免</span><span class="glossary-mini-def">9 月推免前批次</span></span>
+            <span class="glossary-mini-item"><span class="glossary-mini-term">套磁</span><span class="glossary-mini-def">提前联系导师</span></span>
+            <span class="glossary-mini-item"><span class="glossary-mini-term">BG</span><span class="glossary-mini-def">综合学术背景</span></span>
           </div>
-          <a href="pages/intro.html#chapter-glossary" class="side-link-more">→ 全部 121 条</a>
+          <a href="pages/glossary.html" class="side-link-more">→ 全部 121 黑话</a>
         </div>
 
         <!-- 4. 百问百答 -->
@@ -398,31 +324,18 @@
           <div class="mini-block-header">
             <div class="mini-block-icon">❓</div>
             <div class="mini-block-title">百问百答</div>
-            <span class="mini-block-count">6 问</span>
+            <span class="mini-block-count">6/31</span>
           </div>
           <div class="faq-mini">
-            <a href="pages/intro.html#chapter-faq" class="faq-mini-item">
-              <span class="faq-mini-q">保研什么时候开始准备？</span>
-            </a>
-            <a href="pages/intro.html#chapter-faq" class="faq-mini-item">
-              <span class="faq-mini-q">双非能保到清北吗？</span>
-            </a>
-            <a href="pages/intro.html#chapter-faq" class="faq-mini-item">
-              <span class="faq-mini-q">六级多少分够用？</span>
-            </a>
-            <a href="pages/intro.html#chapter-faq" class="faq-mini-item">
-              <span class="faq-mini-q">科研和竞赛哪个更重要？</span>
-            </a>
-            <a href="pages/intro.html#chapter-faq" class="faq-mini-item">
-              <span class="faq-mini-q">夏令营和预推免能同时报吗？</span>
-            </a>
-            <a href="pages/intro.html#chapter-faq" class="faq-mini-item">
-              <span class="faq-mini-q">保研失败怎么转留学？</span>
-            </a>
+            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">保研什么时候开始准备？</span></a>
+            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">双非能保到清北吗？</span></a>
+            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">六级多少分够用？</span></a>
+            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">科研和竞赛哪个更重要？</span></a>
+            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">夏令营和预推免能同时报吗？</span></a>
+            <a href="pages/faq.html" class="faq-mini-item"><span class="faq-mini-q">保研失败怎么转留学？</span></a>
           </div>
-          <a href="pages/intro.html#chapter-faq" class="side-link-more">→ 全部 31 问</a>
+          <a href="pages/faq.html" class="side-link-more">→ 全部 31 问答</a>
         </div>
-
       </aside>
     </div>
   </div>
@@ -437,7 +350,7 @@
   </div>
 </footer>
 
-<!-- 2 维矩阵详情弹窗 -->
+<!-- 时间规划轴详情弹窗 -->
 <div class="matrix-modal" id="matrix-modal">
   <div class="matrix-modal-content">
     <button class="matrix-modal-close" id="matrix-modal-close">×</button>
