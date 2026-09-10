@@ -60,11 +60,11 @@
     list.innerHTML = filtered.length
       ? filtered.map((item, i) => `
         <div class="faq-item">
-          <div class="faq-question">
+          <button class="faq-question" aria-expanded="false" type="button">
             <span class="faq-stage-tag stage-${item.stage}">${item.stage === 1 ? '阶段 1' : '阶段 2'}</span>
             ${esc(item.q)}
-          </div>
-          <div class="faq-answer">${esc(item.a)}</div>
+          </button>
+          <div class="faq-answer" role="region">${esc(item.a)}</div>
         </div>
       `).join('')
       : '<div style="text-align:center; padding:24px; color:var(--color-text-tertiary);">暂无符合条件的问题</div>';
@@ -99,7 +99,10 @@
     if (!list) return;
     list.addEventListener('click', e => {
       const item = e.target.closest('.faq-item');
-      if (item) item.classList.toggle('open');
+      if (!item) return;
+      const isOpen = item.classList.toggle('open');
+      const btn = item.querySelector('.faq-question');
+      if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
 

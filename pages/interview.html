@@ -16,7 +16,7 @@
     <a href="../index.html" class="brand">
       <div class="brand-logo">保</div>
       <div class="brand-text">
-        <h1>保研信息聚合库</h1>
+        <span class="brand-title">保研信息聚合库</span>
         <p>独立项目 · 真实可校验</p>
       </div>
     </a>
@@ -42,14 +42,14 @@
   </div>
 
   <!-- Tab 切换 -->
-  <div class="tab-bar">
-    <button class="tab-btn active" data-tab="general">综合面试</button>
-    <button class="tab-btn" data-tab="english">英语面试 → 通识</button>
-    <button class="tab-btn" data-tab="experience">经验分享</button>
+  <div class="tab-bar" role="tablist" aria-label="面试内容切换">
+    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-general" id="tab-btn-general" data-tab="general">综合面试</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-english" id="tab-btn-english" data-tab="english">英语面试</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-experience" id="tab-btn-experience" data-tab="experience">经验分享</button>
   </div>
 
   <!-- Tab 1: 综合面试 -->
-  <div class="tab-content active" id="tab-general">
+  <div class="tab-content active" role="tabpanel" id="tab-general" aria-labelledby="tab-btn-general">
     <h2 class="tab-title">综合面试 · 头部院校真题</h2>
     <p class="tab-desc">专业面 + 压力面 + 机考 + PPT 汇报 · 头部院校 6-8 所</p>
 
@@ -70,7 +70,7 @@
   </div>
 
   <!-- Tab 2: 英语面试 → 通识 -->
-  <div class="tab-content" id="tab-english">
+  <div class="tab-content" role="tabpanel" id="tab-english" aria-labelledby="tab-btn-english" hidden>
     <div class="english-tip-card">
       <strong>🇬🇧 英语是双保险核心能力</strong><br>
       头部院校英语面试权重 30-50% · 雅思 7.0+ = C9 隐性门槛<br>
@@ -124,7 +124,7 @@
   </div>
 
   <!-- Tab 3: 经验分享 -->
-  <div class="tab-content" id="tab-experience">
+  <div class="tab-content" role="tabpanel" id="tab-experience" aria-labelledby="tab-btn-experience" hidden>
     <h2 class="tab-title">经验分享 · 脱敏授权</h2>
     <p class="tab-desc">6-8 篇学长学姐真实经历 · 真实脱敏 · 经验可参考</p>
 

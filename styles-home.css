@@ -778,3 +778,13 @@
   }
   .main-nav-item:last-child { border-bottom: 0; }
 }
+
+/* ===== brand 标题改为 span ===== */
+.brand-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  display: block;
+  margin: 0;
+  line-height: 1.2;
+}

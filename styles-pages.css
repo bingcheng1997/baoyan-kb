@@ -458,3 +458,35 @@
   letter-spacing: 0.5px;
   font-weight: 700;
 }
+
+/* ===== FAQ 用 button（可访问）===== */
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-xdf-green);
+  cursor: pointer;
+  display: block;
+}
+.faq-question:hover { color: var(--color-xdf-green-dark); }
+.faq-question::before { content: 'Q. '; }
+.faq-item.open .faq-question { color: var(--color-xdf-green-dark); }
+
+/* skip-link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-xdf-green);
+  color: white;
+  padding: 8px 16px;
+  z-index: 9999;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+}
+.skip-link:focus { left: 0; }

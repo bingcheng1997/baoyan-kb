@@ -25,11 +25,21 @@
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const tab = btn.dataset.tab;
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.tab-content').forEach(c => {
+          c.classList.remove('active');
+          c.setAttribute('hidden', '');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
         const target = $('tab-' + tab);
-        if (target) target.classList.add('active');
+        if (target) {
+          target.classList.add('active');
+          target.removeAttribute('hidden');
+        }
       });
     });
   }

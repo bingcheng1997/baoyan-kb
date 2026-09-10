@@ -222,14 +222,14 @@
 
     stage1.innerHTML = stage1Items.map((item, i) => `
       <div class="faq-item" data-i="1-${i}">
-        <div class="faq-question">${esc(item.q)}</div>
+        <button class="faq-question" aria-expanded="false" type="button">${esc(item.q)}</button>
         <div class="faq-answer">${esc(item.a)}</div>
       </div>
     `).join('');
 
     stage2.innerHTML = stage2Items.map((item, i) => `
       <div class="faq-item" data-i="2-${i}">
-        <div class="faq-question">${esc(item.q)}</div>
+        <button class="faq-question" aria-expanded="false" type="button">${esc(item.q)}</button>
         <div class="faq-answer">${esc(item.a)}</div>
       </div>
     `).join('');
