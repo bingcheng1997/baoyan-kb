@@ -202,5 +202,22 @@
   setupGradeSwitch();
   setupMiniTabs();
 
+  // ===== 移动端汉堡菜单 =====
+  function setupNavToggle() {
+    const btn = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.main-nav-inner');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menu.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && e.target !== btn) {
+        menu.classList.remove('open');
+      }
+    });
+  }
+  setupNavToggle();
+
   console.log('[Home v4.0] 渲染完成');
 })();
