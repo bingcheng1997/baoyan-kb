@@ -788,3 +788,21 @@
   margin: 0;
   line-height: 1.2;
 }
+
+/* 案例卡可点击 */
+.case-card {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.case-card:hover {
+  border-color: var(--color-xdf-green);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* 黑话字母索引空状态 */
+.alpha-btn:disabled,
+.alpha-btn.empty {
+  opacity: 0.3;
+  cursor: not-allowed;
+}

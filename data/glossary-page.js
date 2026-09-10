@@ -184,15 +184,26 @@
   }
 
   // 字母索引
+  // 计算每个字母下有多少词
+  function getAlphaCount(letter) {
+    if (letter === 'ALL') return GLOSSARY.length;
+    return GLOSSARY.filter(g => getAlpha(g.term) === letter).length;
+  }
+
   function renderAlphabet() {
     const idx = $('alphabet-index');
     if (!idx) return;
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-    idx.innerHTML = '<button class="alpha-btn active" data-alpha="ALL">全部</button>' +
-      letters.map(l => `<button class="alpha-btn" data-alpha="${l}">${l}</button>`).join('');
+    idx.innerHTML = '<button class="alpha-btn active" data-alpha="ALL">全部 (' + GLOSSARY.length + ')</button>' +
+      letters.map(l => {
+        const count = getAlphaCount(l);
+        const cls = count === 0 ? ' alpha-btn empty' : '';
+        const dis = count === 0 ? ' disabled' : '';
+        return '<button class="alpha-btn' + cls + '" data-alpha="' + l + '"' + dis + '>' + l + (count > 0 ? ' (' + count + ')' : '') + '</button>';
+      }).join('');
     idx.addEventListener('click', e => {
       const btn = e.target.closest('.alpha-btn');
-      if (!btn) return;
+      if (!btn || btn.disabled) return;
       idx.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       state.alpha = btn.dataset.alpha;

@@ -20,7 +20,7 @@
   const TIER_LABELS = { c9: 'C9', t985: '985', t211: '211' };
   const REGIONS = ['北京市', '天津市', '河北省', '山西省', '内蒙古自治区', '辽宁省', '吉林省', '黑龙江省', '上海市', '江苏省', '浙江省', '安徽省', '福建省', '江西省', '山东省', '河南省', '湖北省', '湖南省', '广东省', '广西壮族自治区', '海南省', '重庆市', '四川省', '贵州省', '云南省', '西藏自治区', '陕西省', '甘肃省', '青海省', '宁夏回族自治区', '新疆维吾尔自治区'];
 
-  const state = { tier: 'all', region: 'all', search: '', sort: 'region' };
+  const state = { tier: 'all', region: 'all', search: '', sort: 'region', pageSize: 50 };
 
   function getItems() {
     const all = (window.SCHOOLS_DATA && window.SCHOOLS_DATA.schools) || [];
@@ -91,8 +91,10 @@
     const tbody = $('school-tbody');
     if (!tbody) return;
     const items = getItems();
+    const pageSize = state.pageSize;
+    const showing = items.slice(0, pageSize);
     tbody.innerHTML = items.length
-      ? items.slice(0, 100).map(s => `
+      ? showing.map(s => `
         <tr>
           <td><b>${esc(s.name)}</b></td>
           <td>${esc(s.region)}</td>
@@ -102,10 +104,22 @@
       `).join('')
       : '<tr><td colspan="4" style="text-align:center; padding:24px; color:var(--color-text-tertiary);">暂无符合条件的院校</td></tr>';
 
+    // 加载更多按钮
+    const loadMore = $('school-load-more');
+    if (loadMore) {
+      if (items.length > pageSize) {
+        loadMore.style.display = 'inline-block';
+        const remain = items.length - pageSize;
+        loadMore.textContent = '加载更多 · 还剩 ' + remain + ' 所';
+      } else {
+        loadMore.style.display = 'none';
+      }
+    }
+
     const count = $('school-count');
     if (count) count.textContent = items.length;
-    const showing = $('school-showing');
-    if (showing) showing.textContent = Math.min(100, items.length);
+    const showingEl = $('school-showing');
+    if (showingEl) showingEl.textContent = showing.length;
   }
 
   function getSearchUrl(name) {
@@ -137,10 +151,21 @@
     });
   }
 
+  // 加载更多
+  function setupLoadMore() {
+    const btn = $('school-load-more');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      state.pageSize += 50;
+      render();
+    });
+  }
+
   renderRegion();
   renderTier();
   setupSearch();
   setupSort();
+  setupLoadMore();
   render();
   console.log('[Schools Page v2.0] 已加载 433 所真实数据');
 })();

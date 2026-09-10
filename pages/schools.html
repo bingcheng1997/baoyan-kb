@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="../styles-pages.css">
 </head>
 <body>
+<a href="#main-content" class="skip-link">跳到主内容</a>
 
 <header class="site-header">
   <div class="header-main">
@@ -36,7 +37,7 @@
   </nav>
 </header>
 
-<main class="page-main">
+<main id="main-content" class="page-main">
   <div class="page-header">
     <h1>保研院校 · <span id="school-count">433</span> 所</h1>
     <p class="page-desc">教育部官方名单 · 2025 年新增 67 所 · 31 个地区覆盖</p>
@@ -94,8 +95,11 @@
     </table>
   </div>
 
-  <div class="load-more" style="text-align:center; padding:24px; color:var(--color-text-tertiary); font-size:13px;">
-    📍 已显示前 100 所 · 完整 433 所 · 欢迎 <a href="mailto:baoyan-kb@example.com" style="color:var(--color-xdf-green);">提交数据</a>
+  <div class="load-more" style="text-align:center; padding:24px;">
+    <button id="school-load-more" class="btn btn-primary btn-sm" style="display:none;">加载更多</button>
+    <div style="color:var(--color-text-tertiary); font-size:13px; margin-top:8px;">
+      📍 已显示前 <span id="school-showing">0</span> 所 · 完整 433 所 · 欢迎 <a href="mailto:baoyan-kb@example.com" style="color:var(--color-xdf-green);">提交数据</a>
+    </div>
   </div>
 </main>
 
